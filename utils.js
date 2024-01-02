@@ -22,10 +22,6 @@ export async function getBannerImageSrc(page, data) {
   return files[0];
 }
 
-// It would be nice to use the file content hashing that eleventy-img provides
-// but that means the production build needs to have all the source images.
-// That means downloading multiple GB. Instead, make filenames that are
-// deterministic without knowledge of the file contents.
 function getImageFilename(src, width, format) {
   const name = path.parse(src).name;
   return `${name}-${width}.${format}`;
