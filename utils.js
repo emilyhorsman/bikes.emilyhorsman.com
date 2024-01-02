@@ -44,7 +44,7 @@ export function getSharpOptions(data) {
     options.sharpAvifOptions.quality = data.q;
   }
 
-  if (process.env.USE_CDN_IMAGES.startsWith("https")) {
+  if (process.env.USE_CDN_IMAGES?.startsWith("https") ?? false) {
     options.statsOnly = true;
     options.urlFormat = function ({ src, width, format }) {
       const filename = getImageFilename(src, width, format);

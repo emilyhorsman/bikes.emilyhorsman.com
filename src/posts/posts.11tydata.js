@@ -2,7 +2,7 @@ import "dotenv/config";
 import { v4 as uuidv4 } from "uuid";
 import Image, * as EleventyImg from "@11ty/eleventy-img";
 import * as path from "path";
-import { getBannerImageSrc } from "../../utils.js";
+import { getBannerImageSrc, getSharpOptions } from "../../utils.js";
 
 const eleventyComputed = {
   postTags: (data) => {
@@ -35,9 +35,10 @@ const eleventyComputed = {
         widths: [2].map((scale) => 768 * scale),
         formats: ["webp"],
         outputDir,
+        ...getSharpOptions(data.banner_image),
       });
 
-      return `${process.env.URL}${metadata.webp[0].url}`;
+      return `${metadata.webp[0].url}`;
     },
   },
 };
