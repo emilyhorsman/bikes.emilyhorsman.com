@@ -1,0 +1,11 @@
+---
+eleventyImport:
+  collections: ["posts"]
+---
+{% layout 'base.liquid' %}
+
+{% block main %}
+{% for post in collections.posts reversed %}
+  {% render 'post_summary.liquid', post: post, isFirst: forloop.first, tags_metadata: tags_metadata %}
+{% endfor %}
+{% endblock %}

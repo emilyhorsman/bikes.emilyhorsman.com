@@ -1,0 +1,21 @@
+{% if tags %}
+  <div class="tags">
+    {{ text }}
+    <ul>
+      {% for tag in tags limit: limit %}
+        {% assign slug = tag | slugify %}
+        {% assign classes = tags_metadata[slug].classes | default: '' %}
+        <li
+          {% if classes %}
+            class="{{ classes | join: ' ' }}"
+          {% endif %}
+        >
+          <a href="/tags/{{ slug }}">
+            {{- tag }}
+            {% if collections %}({{ collections[tag].size }}){% endif %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

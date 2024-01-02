@@ -1,0 +1,31 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - posts
+    - all
+    - blogTags
+permalink: /tags/{{ tag | slugify }}/
+eleventyComputed:
+  title: "Posts Tagged: {{ tag }}"
+---
+{% layout 'base.liquid' %}
+
+{% block main %}
+<div class="heading">
+  <h1>
+    <a href="{{ page.url }}">Posts Tagged: {{ tag }}</a>
+  </h1>
+</div>
+<p>
+  {% assign slug = tag | slugify %}
+  {% if tags_metadata[slug].content %}
+    {{ tags_metadata[slug].content | markdown }}
+  {% endif %}
+</p>
+{% for post in collections[tag] reversed %}
+  {% render 'post_summary.liquid', post: post, tags_metadata: tags_metadata %}
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+<div class="summary">
+  {% bannerimage post isFirst %}
+  <h2>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+  </h2>
+  <p>{{ post.data.summary | markdown }}</p>
+  <div class="row">
+    <a href="{{ post.url }}">Read More</a>
+    {% render 'tags-list.liquid', tags: post.data.postTags, limit: 2, tags_metadata: tags_metadata %}
+  </div>
+</div>

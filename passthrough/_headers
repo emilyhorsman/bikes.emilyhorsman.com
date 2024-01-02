@@ -1,0 +1,8 @@
+/*.webm
+  Cache-Control: public, max-age=31536000, immutable
+
+/posts/drafts/*
+  X-Robots-Tag: noindex
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex

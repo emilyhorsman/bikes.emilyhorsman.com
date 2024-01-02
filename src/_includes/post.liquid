@@ -1,0 +1,45 @@
+{% layout 'base.liquid' %}
+
+{% block main %}
+<div class="heading">
+  <h1>
+    <a href="{{ page.url }}">{{ title }}</a>
+  </h1>
+
+  {% render 'time.liquid', date: page.date %}
+</div>
+
+{{ content }}
+
+{% render 'tags-list.liquid',
+  tags: postTags,
+  text: 'Tags:&nbsp;',
+  collections: collections,
+  tags_metadata: tags_metadata
+%}
+
+{% assign previousPost = collections.posts | getPreviousCollectionItem: page %}
+{% assign nextPost = collections.posts | getNextCollectionItem: page %}
+<ul class="next-prev">
+  {% if nextPost %}
+    {% capture time %}
+    {%- render 'time.liquid', date: nextPost.date -%}
+    {% endcapture %}
+    <li>
+      Next ({{ time | rstrip }}):&nbsp;<a href="{{ nextPost.url }}">
+        {{- nextPost.data.title -}}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if previousPost %}
+    {% capture time %}
+    {%- render 'time.liquid', date: previousPost.date -%}
+    {% endcapture %}
+    <li>
+      Prev ({{ time | rstrip }}):&nbsp;<a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+    </li>
+  {% endif %}
+</ul>
+
+{% endblock %}

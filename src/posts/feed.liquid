@@ -1,0 +1,26 @@
+---
+layout: false
+permalink: "/posts/index.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }}</title>
+    <link>{{ site.baseURL }}/</link>
+    <description>Recent posts on {{ site.title }}</description>
+    <language>en-us</language>
+    <atom:link href="{{ site.baseURL }}{{ page.url }}" rel="self" type="application/rss+xml"/>
+    {%- for post in collections.posts reversed -%}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <link>{{ site.baseURL }}{{ post.url }}</link>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <guid>{{ site.baseURL }}{{ post.url }}</guid>
+      {% if post.data.summary %}
+      <description>{{ post.data.summary | markdown }}</description>
+      {% endif %}
+    </item>
+    {%- endfor -%}
+  </channel>
+</rss>

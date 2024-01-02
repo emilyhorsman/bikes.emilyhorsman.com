@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    {% render 'head.liquid', site: site, summary: summary, page: page, title: title, banner_image: banner_image %}
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="/">{{ site.title }}</a>
+      </div>
+      <div>
+        <a href="/about/">About</a>
+        <a href="/posts/">Archive</a>
+        <a href="/posts/index.xml">RSS</a>
+      </div>
+    </header>
+    <main>
+      {% block main -%}
+      {{- content -}}
+      {%- endblock %}
+    </main>
+  </body>
+</html>

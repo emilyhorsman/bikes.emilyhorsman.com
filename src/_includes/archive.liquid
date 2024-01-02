@@ -1,0 +1,32 @@
+---
+eleventyImport:
+  collections: ["posts"]
+---
+{% layout 'base.liquid' %}
+
+{% block main %}
+<div class="heading">
+  <h1>
+    <a href="{{ page.url }}">{{ title }}</a>
+  </h1>
+</div>
+
+{% assign tags = collections[collection_key] | filteredTags %}
+{% render 'tags-list.liquid', tags: tags, collections: collections, tags_metadata: tags_metadata %}
+
+{% assign postsByYear = collections[collection_key] | reverse | groupByYear %}
+{% for tuple in postsByYear %}
+  <h2>{{ tuple[0] }} ({{ tuple[1].size }} posts)</h2>
+  <ol class="content-list">
+    {% for post in tuple[1] %}
+      <li>
+        <time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+          {{ post.date | date: '%b %-d' }}
+        </time>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+{% endfor %}
+
+{% endblock %}

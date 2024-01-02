@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<title>
+  {{ title }}
+  •
+  {{ site.title }}
+</title>
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="{{ site.author }}">
+{% if summary %}
+  <meta name="description" content="{{ summary }}">
+{% endif %}
+
+<meta property="og:title" content="{% if page.fileSlug == '' %}Home {% else %}{{ title }}{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+{% if banner_image.permalink %}
+  <meta property="og:image" content="{{ banner_image.permalink }}">
+  <meta property="og:image:alt" content="{{ banner_image.alt }}">
+{% endif %}
+
+{% capture main_css %}
+{% render "main.scss" %}
+{% endcapture %}
+<style type="text/css">
+  {{ main_css | css }}
+</style>
+
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="/posts/index.xml"
+  title="{{ site.title }}"
+>
+
+{% if page.fileSlug == '' %}
+  <link rel="me" href="https://sfba.social/@emilymhorsman">
+{% endif %}
