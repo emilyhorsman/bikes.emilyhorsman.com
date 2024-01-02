@@ -45,6 +45,22 @@ body {
   }
 }
 
+.draft-banner {
+  background-color: $light-a-color;
+  width: 100%;
+  margin-top: -$gutter;
+  margin-bottom: $gutter;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  p {
+    max-width: 768px;
+    width: 100%;
+  }
+}
+
 .row {
   display: flex;
   flex-direction: row;

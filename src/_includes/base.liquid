@@ -4,6 +4,9 @@
     {% render 'head.liquid', site: site, summary: summary, page: page, title: title, banner_image: banner_image %}
   </head>
   <body>
+    {% if draft %}
+      <div class="draft-banner"><p>This is a draft post. Please don't share until it's done!</p></div>
+    {% endif %}
     <header>
       <div>
         <a href="/">{{ site.title }}</a>

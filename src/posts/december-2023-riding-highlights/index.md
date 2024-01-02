@@ -1,5 +1,5 @@
 ---
-date: "2023-12-31T22:10:31-08:00"
+date: "2024-01-02T00:10:31-08:00"
 title: December 2023 Riding Highlights
 draft: true
 banner_image:
