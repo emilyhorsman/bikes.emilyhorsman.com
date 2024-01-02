@@ -362,6 +362,11 @@ ol li:target {
     background-color: $dark-bg-color;
   }
 
+  .draft-banner {
+    background-color: $dark-a-color;
+    color: black;
+  }
+
   main time {
     color: $dark-fg-accent;
   }
