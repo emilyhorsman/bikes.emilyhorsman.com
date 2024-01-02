@@ -11,6 +11,7 @@ import { getBannerImageSrc, getSharpOptions } from "./utils.js";
 const mdLib = MarkdownIt({
   html: true,
   typographer: true,
+  linkify: true,
 })
   .use(markdownLink)
   .use(MarkdownItFootnote);
