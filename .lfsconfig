@@ -1,3 +1,2 @@
 [lfs]
-	fetchexclude = *
-	skipdownloaderrors = true
+	url = https://683c58a48bf58303adcb844ed4b2e465:c80bc480e298db88c560af623c929a199417199c60c6bb42b1761050c3d21876@git-lfs-s3-proxy-c1m.pages.dev/aea865aa834caf07db22e2ec606f85ff.r2.cloudflarestorage.com/lfs
