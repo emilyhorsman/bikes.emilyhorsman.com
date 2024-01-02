@@ -1,7 +1,6 @@
 ---
 date: "2024-01-02T00:10:31-08:00"
 title: December 2023 Riding Highlights
-draft: true
 banner_image:
   alt: Looking face-on at Kat biking down a wide dirt path in low misty light with her dynamo light shining on two puddles in front of her.
 summary: A bunch of dark, rainy riding, hella coyotes in the park, Lake Merced, Twin Peaks, and (as always) Golden Gate Park. Also 'tis the season to get sick for most of the month :(
