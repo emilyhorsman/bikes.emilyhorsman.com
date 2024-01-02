@@ -6,7 +6,9 @@
     <a href="{{ page.url }}">{{ title }}</a>
   </h1>
 
-  {% render 'time.liquid', date: page.date %}
+  {% unless no_date %}
+    {% render 'time.liquid', date: page.date %}
+  {% endunless %}
 </div>
 
 {{ content }}

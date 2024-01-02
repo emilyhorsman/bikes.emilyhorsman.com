@@ -1,6 +1,7 @@
 ---
 title: About
 layout: post.liquid
+no_date: true
 ---
 
 - [me+bikes@emilyhorsman.com](mailto:me+bikes@emilyhorsman.com)
