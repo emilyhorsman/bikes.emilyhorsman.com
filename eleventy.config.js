@@ -131,7 +131,7 @@ async function image(
   });
 
   const pictureElement = EleventyImg.generateHTML(metadata, {
-    sizes: "auto",
+    sizes: "(min-width: 768px) 768px, 100vw",
     loading: isFirst ? "eager" : "lazy",
     decode: "async",
     ...htmlOptions,
@@ -162,7 +162,7 @@ async function bannerImage(post, isFirst = false) {
 
   const pictureElement = EleventyImg.generateHTML(metadata, {
     alt: post.data.banner_image.alt,
-    sizes: "auto",
+    sizes: "(min-width: 768px) 768px, 100vw",
     loading: isFirst ? "eager" : "lazy",
     decode: "async",
   });
