@@ -263,6 +263,14 @@ header {
       font-size: 0.9rem;
     }
   }
+
+  &.timeline {
+    font-size: 0.85em;
+
+    time {
+      width: 12ch;
+    }
+  }
 }
 
 blockquote {
