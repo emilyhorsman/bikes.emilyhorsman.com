@@ -7,6 +7,8 @@ import * as path from "path";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
 import { getBannerImageSrc, getSharpOptions } from "./utils.js";
+import posthtml from "posthtml";
+import posthtmlMinifyClassnames from "posthtml-minify-classnames";
 
 const mdLib = MarkdownIt({
   html: true,
@@ -36,6 +38,23 @@ export default (c) => {
       sortAttributes: true,
       sortClassName: true,
     });
+  });
+
+  c.addTransform("posthtml", async function (content, outputPath) {
+    if (!outputPath.endsWith(".html")) {
+      return content;
+    }
+
+    const result = await posthtml()
+      .use(
+        posthtmlMinifyClassnames({
+          removeUnfound: true,
+          genNameId: false,
+          genNameClass: "genName",
+        })
+      )
+      .process(content);
+    return result.html;
   });
 
   c.addShortcode("image", image);

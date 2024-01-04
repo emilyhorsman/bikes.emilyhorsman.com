@@ -8,6 +8,8 @@
         "html-minifier": "^4.0.0",
         "markdown-it": "^14.0.0",
         "markdown-it-footnote": "^4.0.0",
+        "posthtml": "^0.16.6",
+        "posthtml-minify-classnames": "^0.4.0",
         "sass": "^1.69.6",
         "uuid": "^9.0.1"
     },
