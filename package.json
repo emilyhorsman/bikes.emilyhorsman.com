@@ -1,7 +1,7 @@
 {
     "type": "module",
     "dependencies": {
-        "@11ty/eleventy": "3.0.0-alpha.3",
+        "@11ty/eleventy": "^3.0.0-alpha.4",
         "@11ty/eleventy-img": "^3.1.8",
         "dotenv": "^16.3.1",
         "glob": "^10.3.10",
