@@ -3,6 +3,7 @@
     "dependencies": {
         "@11ty/eleventy": "^3.0.0-alpha.4",
         "@11ty/eleventy-img": "^3.1.8",
+        "csso": "^5.0.5",
         "dotenv": "^16.3.1",
         "glob": "^10.3.10",
         "html-minifier": "^4.0.0",

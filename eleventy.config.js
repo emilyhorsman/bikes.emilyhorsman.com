@@ -9,6 +9,7 @@ import MarkdownItFootnote from "markdown-it-footnote";
 import { getBannerImageSrc, getSharpOptions } from "./utils.js";
 import posthtml from "posthtml";
 import posthtmlMinifyClassnames from "posthtml-minify-classnames";
+import * as csso from "csso";
 
 const mdLib = MarkdownIt({
   html: true,
@@ -21,9 +22,10 @@ mdLib.renderer.rules.footnote_caption = renderFootnoteCaption;
 
 export default (c) => {
   c.addFilter("css", function (value) {
-    return Sass.compileString(value, {
+    const compiled = Sass.compileString(value, {
       style: "compressed",
     }).css;
+    return csso.minify(compiled).css;
   });
 
   c.addTransform("htmlmin", function (content, outputPath) {
@@ -32,6 +34,7 @@ export default (c) => {
     }
 
     return htmlmin.minify(content, {
+      cssmin: false,
       useShortDoctype: true,
       removeComments: true,
       collapseWhitespace: true,
