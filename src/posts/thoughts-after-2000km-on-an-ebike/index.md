@@ -38,7 +38,7 @@ banner_image:
 ## Assist Experience
 
 1. The assist algorithm is very, very good. It feels shockingly natural. It's much better than the hub-motor bike share e-bikes in San Francisco.
-1. Occasionally I'll get brief moments where the motor seems to flicker off or is out of parity with my effort. I haven't totally noticed a pattern with this but it seems to be when my bike is asymmetrically loaded. I'm curious if other e-bike riders get this sometimes.
+1. ~~Occasionally I'll get brief moments where the motor seems to flicker off or is out of parity with my effort.~~ I haven't totally noticed a pattern with this but it seems to be when my bike is asymmetrically loaded. I'm curious if other e-bike riders get this sometimes. **Update**: This went away entirely when I [switched drivetrains](/posts/cues-drivetrain-upgrade-for-egret/).
 1. It's surprisingly quiet!
 1. The drag you feel when the motor assists minimally or not at all could be better. I think I've maybe "broken in" mine a bit and the drag feels less bad than it did when I first got the bike. I remember trying the lowest assist level right away and not liking it; now I don't mind it so much. I may have just gotten used to it.
 1. The range on this 504 Wh battery is excellent.
