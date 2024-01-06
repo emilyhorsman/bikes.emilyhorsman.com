@@ -7,6 +7,7 @@ import * as path from "path";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
 import { getBannerImageSrc, getSharpOptions } from "./utils.js";
+import posthtml from "posthtml";
 
 const mdLib = MarkdownIt({
   html: true,
@@ -36,6 +37,14 @@ export default (c) => {
       sortAttributes: true,
       sortClassName: true,
     });
+  });
+
+  c.addTransform("lazy-images", async function (content, outputPath) {
+    if (!outputPath.endsWith(".html")) {
+      return content;
+    }
+
+    return (await posthtml([eagerFirstImagesPlugin]).process(content)).html;
   });
 
   c.addShortcode("image", image);
@@ -92,13 +101,7 @@ function markdownLink(md) {
   };
 }
 
-async function image(
-  naiveSrc,
-  altOrOptions,
-  isFirst = false,
-  photoCredit = false,
-  width = 768
-) {
+async function image(naiveSrc, altOrOptions, photoCredit = false, width = 768) {
   const src = path.join(
     naiveSrc[0] === "/"
       ? this.eleventy.directories.input
@@ -132,7 +135,7 @@ async function image(
 
   const pictureElement = EleventyImg.generateHTML(metadata, {
     sizes: "(min-width: 768px) 768px, 100vw",
-    loading: isFirst ? "eager" : "lazy",
+    loading: "lazy",
     decode: "async",
     ...htmlOptions,
   });
@@ -146,7 +149,7 @@ async function image(
   }</div>`;
 }
 
-async function bannerImage(post, isFirst = false) {
+async function bannerImage(post) {
   const src = await getBannerImageSrc(post, post.data);
   if (!src) {
     return "";
@@ -163,7 +166,7 @@ async function bannerImage(post, isFirst = false) {
   const pictureElement = EleventyImg.generateHTML(metadata, {
     alt: post.data.banner_image.alt,
     sizes: "(min-width: 768px) 768px, 100vw",
-    loading: isFirst ? "eager" : "lazy",
+    loading: "lazy",
     decode: "async",
   });
   return `<a href="${post.url}" class="image image-container">${pictureElement}</a>`;
@@ -174,4 +177,15 @@ function renderFootnoteCaption(tokens, idx) {
   const n = Number(tokens[idx].meta.id + 1).toString();
   if (tokens[idx].meta.subId > 0) n += `:${tokens[idx].meta.subId}`;
   return `${n}`;
+}
+
+function eagerFirstImagesPlugin(tree) {
+  let numSet = 0;
+  tree.match({ tag: "img" }, (node) => {
+    if (numSet < 2) {
+      node.attrs.loading = "eager";
+      numSet++;
+    }
+    return node;
+  });
 }

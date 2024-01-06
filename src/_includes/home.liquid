@@ -11,7 +11,7 @@ pagination:
 
 {% block main %}
 {% for post in pagination.items %}
-  {% render 'post_summary.liquid', post: post, isFirst: forloop.first, tags_metadata: tags_metadata %}
+  {% render 'post_summary.liquid', post: post, tags_metadata: tags_metadata %}
 {% endfor %}
 
 <div class="pagination">
