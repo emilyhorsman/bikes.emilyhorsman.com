@@ -3,6 +3,9 @@ export default {
     classes: ["tag-bike"],
     content:
       "I sort of randomly won this Brompton in a [CicLAvia](https://www.ciclavia.org) raffle. I'm not convinced it's for me but it's a serendipitous bike project. Every new bike teaches me a bunch of things and so I'm giving it a good shot. I'll probably turn it into a loaner if it doesn't work out for me.",
+    timeline: {
+      new_bike_day: "2023-12-12",
+    },
   },
   egret: {
     classes: ["tag-bike"],
