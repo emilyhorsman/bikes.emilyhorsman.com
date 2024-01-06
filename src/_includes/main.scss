@@ -376,9 +376,24 @@ ol li:target {
   border-top-style: dashed;
 }
 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $gutter * 2 + 6px;
+  padding-top: $gutter * 2;
+  flex-wrap: wrap;
+  border-top: 1px solid $light-fg-accent;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: $dark-bg-color;
+  }
+
+  .pagination {
+    border-top: 1px solid $dark-fg-accent;
   }
 
   .draft-banner {
