@@ -23,6 +23,9 @@ export default {
   },
   "weed-can": {
     classes: ["tag-bike"],
+    timeline: {
+      new_bike_day: "2023-01-08",
+    },
   },
   "loosey-brakus": {
     classes: ["tag-bike"],
