@@ -1,5 +1,5 @@
 ---
-date: "2024-01-05T23:53:00-08:00"
+date: "2024-01-09T14:00:00-08:00"
 title: Dialing In the Hardtack
 summary: Getting all my bikes dialed in for the new year. I put some very short reach Tumbleweed Big Dipper bars on!
 banner_image:
