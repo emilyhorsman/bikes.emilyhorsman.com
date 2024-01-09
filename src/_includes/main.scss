@@ -201,6 +201,7 @@ a {
   &:hover,
   &:active {
     color: $light-a-color;
+    cursor: pointer;
   }
 }
 
@@ -385,6 +386,15 @@ ol li:target {
   padding-top: $gutter * 2;
   flex-wrap: wrap;
   border-top: 1px solid $light-fg-accent;
+}
+
+.thoughts-link {
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

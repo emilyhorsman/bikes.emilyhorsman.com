@@ -1,0 +1,16 @@
+---
+title: Thoughts
+---
+{% layout 'base.liquid' %}
+
+{% block main %}
+{% for thought in thoughts %}
+  {% assign id = thought.date | date: '%s' %}
+  <a href="#{{ id }}" class="thoughts-link">
+    <time datetime="{{ thought.date | date: '%Y-%m-%dT%H:%M:%S%z' }}" id="{{ id }}">
+      {{- thought.date | date: '%b %-d, %Y %-l:%M%P' -}}
+    </time>
+  </a>
+  <p>{{ thought.post | markdown }}</p>
+{% endfor %}
+{% endblock %}

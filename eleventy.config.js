@@ -8,6 +8,7 @@ import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
 import { getBannerImageSrc, getSharpOptions } from "./utils.js";
 import posthtml from "posthtml";
+import yaml from "js-yaml";
 
 const mdLib = MarkdownIt({
   html: true,
@@ -77,6 +78,8 @@ export default (c) => {
   c.addPassthroughCopy({ passthrough: "." });
   c.addPassthroughCopy({ "passthrough/img": "img" });
   c.addWatchTarget("passthrough");
+
+  c.addDataExtension("yaml", (contents) => yaml.load(contents));
 
   return {
     dir: {
