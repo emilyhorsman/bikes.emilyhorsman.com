@@ -56,17 +56,23 @@ export default (c) => {
   c.addFilter("markdown", (content) => mdLib.renderInline(content));
 
   c.addFilter("filteredTags", (collection) => {
-    const tagSet = new Set();
+    const tagsWithCount = {};
     for (const item of collection) {
       (item.data.tags ?? []).forEach((tag) => {
         if (["all", "posts"].includes(tag)) {
           return;
         }
-        tagSet.add(tag);
+
+        if (!tagsWithCount[tag]) {
+          tagsWithCount[tag] = 0;
+        }
+        tagsWithCount[tag]++;
       });
     }
 
-    return Array.from(tagSet);
+    return Object.keys(tagsWithCount).sort(
+      (a, b) => tagsWithCount[b] - tagsWithCount[a]
+    );
   });
 
   c.addFilter("groupByYear", (collection) => {
