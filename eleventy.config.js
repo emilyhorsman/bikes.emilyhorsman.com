@@ -37,7 +37,7 @@ export default (c) => {
           removeUnfound: true,
           genNameId: false,
           genNameClass:
-            process.env.ELEVENTY_ENV === "development" ? "genName" : false,
+            process.env.ELEVENTY_ENV === "development" ? false : "genName",
         })
       )
       .use(
