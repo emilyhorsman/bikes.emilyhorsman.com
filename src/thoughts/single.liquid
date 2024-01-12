@@ -1,0 +1,26 @@
+---
+pagination:
+  data: thoughts
+  alias: thought
+  size: 1
+  addAllPagesToCollections: true
+permalink: "/thoughts/{{ thought.date | date: '%s' }}"
+eleventyComputed:
+  title: "{{ thought.post | truncatewords: 4 }}"
+---
+{% layout 'base.liquid' %}
+
+{% block main %}
+<div class="heading">
+  <h1>
+    <a href="/thoughts">Thoughts</a>
+  </h1>
+</div>
+
+<a href="{{ page.url }}" class="thoughts-link">
+  <time datetime="{{ thought.date | date: '%Y-%m-%dT%H:%M:%S%z' }}" id="{{ id }}">
+    {{- thought.date | date: '%b %-d, %Y %-l:%M%P' -}}
+  </time>
+</a>
+{{ thought.post | markdownblock }}
+{% endblock %}
