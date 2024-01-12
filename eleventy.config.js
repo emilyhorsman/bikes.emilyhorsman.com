@@ -55,7 +55,8 @@ export default (c) => {
         posthtmlMinifyClassnames({
           removeUnfound: true,
           genNameId: false,
-          genNameClass: "genName",
+          genNameClass:
+            process.env.ELEVENTY_ENV === "development" ? false : "genName",
         })
       )
       .process(content);
