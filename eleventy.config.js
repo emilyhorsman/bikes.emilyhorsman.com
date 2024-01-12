@@ -102,6 +102,10 @@ export default (c) => {
 
   c.addDataExtension("yaml", (contents) => yaml.load(contents));
 
+  c.setServerOptions({
+    showAllHosts: true,
+  });
+
   return {
     dir: {
       input: "src",
