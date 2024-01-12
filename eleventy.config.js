@@ -5,6 +5,7 @@ import Image, * as EleventyImg from "@11ty/eleventy-img";
 import * as path from "path";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
+import MarkdownItPlainText from "markdown-it-plain-text";
 import { getBannerImageSrc, getSharpOptions } from "./utils.js";
 import posthtml from "posthtml";
 import posthtmlMinifyClassnames from "posthtml-minify-classnames";
@@ -17,7 +18,8 @@ const mdLib = MarkdownIt({
   linkify: true,
 })
   .use(markdownLink)
-  .use(MarkdownItFootnote);
+  .use(MarkdownItFootnote)
+  .use(MarkdownItPlainText);
 mdLib.renderer.rules.footnote_caption = renderFootnoteCaption;
 
 export default (c) => {
@@ -63,6 +65,10 @@ export default (c) => {
   c.setLibrary("md", mdLib);
   c.addFilter("markdown", (content) => mdLib.renderInline(content));
   c.addFilter("markdownblock", (content) => mdLib.render(content));
+  c.addFilter("markdownplain", (content) => {
+    mdLib.render(content);
+    return mdLib.plainText;
+  });
 
   c.addFilter("filteredTags", (collection) => {
     const tagsWithCount = {};

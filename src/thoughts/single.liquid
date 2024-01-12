@@ -6,7 +6,7 @@ pagination:
   addAllPagesToCollections: true
 permalink: "/thoughts/{{ thought.date | date: '%s' }}"
 eleventyComputed:
-  title: "{{ thought.post | truncatewords: 4 }}"
+  title: "{{ thought.post | markdownplain | truncatewords: 4 }}"
 ---
 {% layout 'base.liquid' %}
 
