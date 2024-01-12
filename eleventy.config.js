@@ -54,6 +54,7 @@ export default (c) => {
   // set instead of amend because we want to use the instance elsewhere.
   c.setLibrary("md", mdLib);
   c.addFilter("markdown", (content) => mdLib.renderInline(content));
+  c.addFilter("markdownblock", (content) => mdLib.render(content));
 
   c.addFilter("filteredTags", (collection) => {
     const tagsWithCount = {};

@@ -4,6 +4,12 @@ title: Thoughts
 {% layout 'base.liquid' %}
 
 {% block main %}
+<div class="heading">
+  <h1>
+    <a href="{{ page.url }}">{{ title }}</a>
+  </h1>
+</div>
+
 {% for thought in thoughts %}
   {% assign id = thought.date | date: '%s' %}
   <a href="#{{ id }}" class="thoughts-link">
@@ -11,6 +17,6 @@ title: Thoughts
       {{- thought.date | date: '%b %-d, %Y %-l:%M%P' -}}
     </time>
   </a>
-  <p>{{ thought.post | markdown }}</p>
+  {{ thought.post | markdownblock }}
 {% endfor %}
 {% endblock %}

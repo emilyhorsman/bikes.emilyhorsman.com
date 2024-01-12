@@ -388,12 +388,23 @@ ol li:target {
   border-top: 1px solid $light-fg-accent;
 }
 
+.heading + .thoughts-link {
+  margin-top: $gutter;
+}
+
 .thoughts-link {
   text-decoration: none;
+  display: block;
+  font-size: 0.85em;
+  margin-top: $gutter * 2;
 
   &:hover,
   &:active {
     text-decoration: underline;
+  }
+
+  + p {
+    margin-top: 0.25rem;
   }
 }
 
