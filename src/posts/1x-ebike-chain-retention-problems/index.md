@@ -29,11 +29,11 @@ My favourite solution would be a narrow-wide chainring which is what you tend to
 
 Another solution is using a chain keeper. My understanding is these were more popular before the ubiquity of narrow-wide chainrings — although you still see them on some mountain bikes where they expect the chain to bounce around a lot. This would involve removing the outboard chain guard altogether (💯) and clamping a keeper to the seat tube over the chain. Paul Component Engineering makes a [beautiful purple one](https://www.paulcomp.com/shop/components/drivetrain/chain-keepers/chain-keeper/) with a design that allows it to work with a 34 to 55mm chainline. However, I think the mountable area on the seat tube would be too high to have the chain block sit right over the chain because the drive unit on this e-bike prevents it from going further down. (Edit: The fine folks at Paul confirmed that this wouldn't work on a mid-drive e-bike.)
 
-{% image "chain_keeper_clamp_gallery_3.jpg" "A muddy Chain Keeper sitting directly over the chain" false "Paul Component Engineering" %}
+{% image "chain_keeper_clamp_gallery_3.jpg" "A muddy Chain Keeper sitting directly over the chain" "Paul Component Engineering" %}
 
 [Wolf Tooth makes one](https://www.wolftoothcomponents.com/collections/chainguides/products/gnarwolf-chainguide-seat-tube-clamp-mount) that I think would solve the clearance issues because the seat tube clamp is much higher than the chain block. Although it's possible that the bracket still wouldn't clear the motor unit.
 
-{% image "wolf_tooth.jpg" "A Wolf Tooth GnarWolf Chainguide sitting over the chain" false "Wolf Tooth Components" %}
+{% image "wolf_tooth.jpg" "A Wolf Tooth GnarWolf Chainguide sitting over the chain" "Wolf Tooth Components" %}
 
 There are also a variety of chain deflectors out there that act more like an inner chain guard instead of protecting both the inboard and outboard sides. This might work since I have the outer chain guard. It may at least stop the chain from getting stuck when it does fall inboard. Many of these have the same clearance issue as the Paul Chain Keeper since the retention part is basically at the same height as the mount.
 

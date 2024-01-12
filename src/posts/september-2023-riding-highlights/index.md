@@ -84,11 +84,11 @@ The wildfires up north gave us several days of poor air quality. One day we rode
 
 Market St vibes.
 
-{% image "R0005478.jpg" "A woman in an orange 'Slow is Forever' shirt riding in a downtown street with the ferry building in the background" false false 576 %}
+{% image "R0005478.jpg" "A woman in an orange 'Slow is Forever' shirt riding in a downtown street with the ferry building in the background" false 576 %}
 
 I'd love to know more about this area near Crane Cove Park.
 
-{% image "R0005536.jpg" "A woman riding on an empty road towards a stark  building labelled 'Union Iron Works Company'" false false 576 %}
+{% image "R0005536.jpg" "A woman riding on an empty road towards a stark  building labelled 'Union Iron Works Company'" false 576 %}
 
 Battery Caulfield descent out of the Presidio. This is my favourite way to get out of the Presidio when the traffic is light.
 
@@ -98,7 +98,7 @@ There was a downed tree on the old growth oak forest network 😭
 
 {% image "R0005338.jpg" "A downed tree blocking a dirt trail" %}
 
-{% image "R0005342.jpg" "Warm flowers" false false 576 %}
+{% image "R0005342.jpg" "Warm flowers" false 576 %}
 
 Riding around the Presidio at night.
 

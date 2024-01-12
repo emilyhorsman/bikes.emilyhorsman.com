@@ -29,16 +29,16 @@ Here's an action montage courtesy of Ben Cochran[^2]. Ben really gets those angl
 
 [^2]: Who has better composition skills than you'll normally see on this blog.
 
-{% image "R0007297.jpg" "A close up of the rear hub and rear triangle with me out of focus bending the derailleur hanger" false "Ben Cochran" %}
+{% image "R0007297.jpg" "A close up of the rear hub and rear triangle with me out of focus bending the derailleur hanger" "Ben Cochran" %}
 
-{% image "R0007293.jpg" "A polished rim with a small gap between it and the derailleur hanger alignment gauge." false "Ben Cochran" %}
+{% image "R0007293.jpg" "A polished rim with a small gap between it and the derailleur hanger alignment gauge."  "Ben Cochran" %}
 
 That's me, pleading this wouldn't be a trip to a framebuilder. Peep Jerry in the back with his crocs 🫡.
 
-{% image "R0007296.jpg" "Me holding on to the tire for leverage and bending a derailleur hanger" false "Ben Cochran" %}
+{% image "R0007296.jpg" "Me holding on to the tire for leverage and bending a derailleur hanger" "Ben Cochran" %}
 
 We'll talk about those hot gold Motolites another time.
 
-{% image "R0007282.jpg" "Me holding on to the seatstay for leverage and bending a derailleur hanger" false "Ben Cochran" %}
+{% image "R0007282.jpg" "Me holding on to the seatstay for leverage and bending a derailleur hanger" "Ben Cochran" %}
 
 More to come on this build!

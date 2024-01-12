@@ -10,6 +10,7 @@ import { getBannerImageSrc, getSharpOptions } from "./utils.js";
 import posthtml from "posthtml";
 import posthtmlMinifyClassnames from "posthtml-minify-classnames";
 import * as csso from "csso";
+import yaml from "js-yaml";
 
 const mdLib = MarkdownIt({
   html: true,
@@ -49,6 +50,7 @@ export default (c) => {
     }
 
     const result = await posthtml()
+      .use(eagerFirstImagesPlugin)
       .use(
         posthtmlMinifyClassnames({
           removeUnfound: true,
@@ -66,19 +68,26 @@ export default (c) => {
   // set instead of amend because we want to use the instance elsewhere.
   c.setLibrary("md", mdLib);
   c.addFilter("markdown", (content) => mdLib.renderInline(content));
+  c.addFilter("markdownblock", (content) => mdLib.render(content));
 
   c.addFilter("filteredTags", (collection) => {
-    const tagSet = new Set();
+    const tagsWithCount = {};
     for (const item of collection) {
       (item.data.tags ?? []).forEach((tag) => {
         if (["all", "posts"].includes(tag)) {
           return;
         }
-        tagSet.add(tag);
+
+        if (!tagsWithCount[tag]) {
+          tagsWithCount[tag] = 0;
+        }
+        tagsWithCount[tag]++;
       });
     }
 
-    return Array.from(tagSet);
+    return Object.keys(tagsWithCount).sort(
+      (a, b) => tagsWithCount[b] - tagsWithCount[a]
+    );
   });
 
   c.addFilter("groupByYear", (collection) => {
@@ -90,6 +99,8 @@ export default (c) => {
   c.addPassthroughCopy({ passthrough: "." });
   c.addPassthroughCopy({ "passthrough/img": "img" });
   c.addWatchTarget("passthrough");
+
+  c.addDataExtension("yaml", (contents) => yaml.load(contents));
 
   return {
     dir: {
@@ -114,13 +125,7 @@ function markdownLink(md) {
   };
 }
 
-async function image(
-  naiveSrc,
-  altOrOptions,
-  isFirst = false,
-  photoCredit = false,
-  width = 768
-) {
+async function image(naiveSrc, altOrOptions, photoCredit = false, width = 768) {
   const src = path.join(
     naiveSrc[0] === "/"
       ? this.eleventy.directories.input
@@ -154,7 +159,7 @@ async function image(
 
   const pictureElement = EleventyImg.generateHTML(metadata, {
     sizes: "(min-width: 768px) 768px, 100vw",
-    loading: isFirst ? "eager" : "lazy",
+    loading: "lazy",
     decode: "async",
     ...htmlOptions,
   });
@@ -168,7 +173,7 @@ async function image(
   }</div>`;
 }
 
-async function bannerImage(post, isFirst = false) {
+async function bannerImage(post) {
   const src = await getBannerImageSrc(post, post.data);
   if (!src) {
     return "";
@@ -185,7 +190,7 @@ async function bannerImage(post, isFirst = false) {
   const pictureElement = EleventyImg.generateHTML(metadata, {
     alt: post.data.banner_image.alt,
     sizes: "(min-width: 768px) 768px, 100vw",
-    loading: isFirst ? "eager" : "lazy",
+    loading: "lazy",
     decode: "async",
   });
   return `<a href="${post.url}" class="image image-container">${pictureElement}</a>`;
@@ -196,4 +201,15 @@ function renderFootnoteCaption(tokens, idx) {
   const n = Number(tokens[idx].meta.id + 1).toString();
   if (tokens[idx].meta.subId > 0) n += `:${tokens[idx].meta.subId}`;
   return `${n}`;
+}
+
+function eagerFirstImagesPlugin(tree) {
+  let numSet = 0;
+  tree.match({ tag: "img" }, (node) => {
+    if (numSet < 2) {
+      node.attrs.loading = "eager";
+      numSet++;
+    }
+    return node;
+  });
 }

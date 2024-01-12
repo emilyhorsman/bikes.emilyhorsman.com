@@ -117,6 +117,17 @@ video {
   h2 {
     margin-top: 0.8rem;
     margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .draft {
+    font-size: 0.8rem;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    border-style: dashed;
+    padding: 0.25em 0.5em;
   }
 
   .tags {
@@ -190,6 +201,7 @@ a {
   &:hover,
   &:active {
     color: $light-a-color;
+    cursor: pointer;
   }
 }
 
@@ -261,6 +273,14 @@ header {
     .repair {
       display: block;
       font-size: 0.9rem;
+    }
+  }
+
+  &.timeline {
+    font-size: 0.85em;
+
+    time {
+      width: 12ch;
     }
   }
 }
@@ -357,9 +377,44 @@ ol li:target {
   border-top-style: dashed;
 }
 
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: $gutter * 2 + 6px;
+  padding-top: $gutter * 2;
+  flex-wrap: wrap;
+  border-top: 1px solid $light-fg-accent;
+}
+
+.heading + .thoughts-link {
+  margin-top: $gutter;
+}
+
+.thoughts-link {
+  text-decoration: none;
+  display: block;
+  font-size: 0.85em;
+  margin-top: $gutter * 2;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+
+  + p {
+    margin-top: 0.25rem;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: $dark-bg-color;
+  }
+
+  .pagination {
+    border-top: 1px solid $dark-fg-accent;
   }
 
   .draft-banner {

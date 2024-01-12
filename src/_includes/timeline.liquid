@@ -1,0 +1,14 @@
+<ol class="content-list timeline">
+  {% for post in posts, reversed %}
+    {% if post.data.repair %}
+      <li>
+        {% include 'time.liquid', date: post.date %}
+        <a href="{{ post.url }}">{{ post.data.repair }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+  <li>
+    {% include 'time.liquid', date: metadata.new_bike_day %}
+    <span>New bike day!</span>
+  </li>
+</ol>

@@ -25,6 +25,11 @@ eleventyComputed:
     {{ tags_metadata[slug].content | markdown }}
   {% endif %}
 </p>
+
+{% if tags_metadata[slug].timeline.new_bike_day %}
+  {% render 'timeline.liquid', posts: collections[tag], metadata: tags_metadata[slug].timeline %}
+{% endif %}
+
 {% for post in collections[tag] reversed %}
   {% render 'post_summary.liquid', post: post, tags_metadata: tags_metadata %}
 {% endfor %}

@@ -1,11 +1,26 @@
 ---
 eleventyImport:
   collections: ["posts"]
+pagination:
+  data: collections.posts
+  size: 20
+  reverse: true
+  addAllPagesToCollections: true
 ---
 {% layout 'base.liquid' %}
 
 {% block main %}
-{% for post in collections.posts reversed %}
-  {% render 'post_summary.liquid', post: post, isFirst: forloop.first, tags_metadata: tags_metadata %}
+{% for post in pagination.items %}
+  {% render 'post_summary.liquid', post: post, tags_metadata: tags_metadata %}
 {% endfor %}
+
+<div class="pagination">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">‹ Newer</a>
+  {% endif %}
+  <span>Page {{ pagination.pageNumber | plus: 1 }} of {{ pagination.pages.size }}</span>
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Older ›</a>
+  {% endif %}
+</div>
 {% endblock %}
