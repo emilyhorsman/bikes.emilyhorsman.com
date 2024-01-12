@@ -1,7 +1,6 @@
 import "dotenv/config";
 
 import * as Sass from "sass";
-import * as htmlmin from "html-minifier";
 import Image, * as EleventyImg from "@11ty/eleventy-img";
 import * as path from "path";
 import MarkdownIt from "markdown-it";
@@ -9,8 +8,8 @@ import MarkdownItFootnote from "markdown-it-footnote";
 import { getBannerImageSrc, getSharpOptions } from "./utils.js";
 import posthtml from "posthtml";
 import posthtmlMinifyClassnames from "posthtml-minify-classnames";
-import * as csso from "csso";
 import yaml from "js-yaml";
+import htmlnano from "htmlnano";
 
 const mdLib = MarkdownIt({
   html: true,
@@ -23,25 +22,7 @@ mdLib.renderer.rules.footnote_caption = renderFootnoteCaption;
 
 export default (c) => {
   c.addFilter("css", function (value) {
-    const compiled = Sass.compileString(value, {
-      style: "compressed",
-    }).css;
-    return csso.minify(compiled).css;
-  });
-
-  c.addTransform("htmlmin", function (content, outputPath) {
-    if (!outputPath.endsWith(".html")) {
-      return content;
-    }
-
-    return htmlmin.minify(content, {
-      cssmin: false,
-      useShortDoctype: true,
-      removeComments: true,
-      collapseWhitespace: true,
-      sortAttributes: true,
-      sortClassName: true,
-    });
+    return Sass.compileString(value).css;
   });
 
   c.addTransform("posthtml", async function (content, outputPath) {
@@ -56,7 +37,19 @@ export default (c) => {
           removeUnfound: true,
           genNameId: false,
           genNameClass:
-            process.env.ELEVENTY_ENV === "development" ? false : "genName",
+            process.env.ELEVENTY_ENV === "development" ? "genName" : false,
+        })
+      )
+      .use(
+        htmlnano({
+          collapseWhitespace: "aggressive",
+          removeComments: "all",
+          removeAttributeQuotes: true,
+          removeRedundantAttributes: true,
+          removeOptionalTags: true,
+          minifyJs: false,
+          minifySvg: false,
+          removeUnusedCss: {},
         })
       )
       .process(content);
