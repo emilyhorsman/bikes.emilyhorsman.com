@@ -8,7 +8,7 @@ tags:
   - projects
   - egret
   - bike fit
-repair: Switched to small GP1 Evo grips, moved the brake levers around, re-wrapped the inner bar ends, replaced the front brake pads, and bled the front brake.
+repair: Switched to small GP1 Evo grips, moved the brake levers around, re-wrapped the inner bar ends, replaced the front brake pads (at 2901 km), and bled the front brake.
 draft: true
 ---
 
