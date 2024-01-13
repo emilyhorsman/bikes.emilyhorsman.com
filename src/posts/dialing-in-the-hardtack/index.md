@@ -8,6 +8,10 @@ tags:
   - projects
   - weed can
 repair: Installed 51cm Tumbleweed Big Dipper bars, Ergon BT Gravel tape, put the basket back on, and swapped the Yokozuna compressionless housing for some traditional Shimano housing.
+images:
+  DSCF1263.jpg:
+    q: 50
+    alt: Looking down at the handlebars and basket while riding. Motion blurred road in the background.
 ---
 
 I took my Hardtack ("[weed can](/tags/weed-can)") out for a 25km ride the other day[^1] and it's feeling great! I got the stack dialed in I think — I was shooting for a more aggressive position but I'm going to give it time. The position I've ended up at puts the bars a bit above level with the saddle and it's feeling pretty good. I feel like I'm not quite getting the power out of it I want but I'll keep playing around. For now it's feeling comfortable and the riding is very enjoyable and that's all that matters. The largest change is swapping out the 40cm drop bars[^2] with some 51cm Tumbleweed [Big Dipper](https://tumbleweed.cc/collections/products/products/bigdipper) bars.
@@ -31,7 +35,7 @@ I couldn't save the bar tape I had on the old bars. I'll use some scraps from it
 
 I needed some way to carry things on this bike other than just the bare front rack. I threw its old 137 basket on for now.
 
-{% image "DSCF1263.jpg" "Looking down at the handlebars and basket while riding. Motion blurred road in the background." %}
+{% image "DSCF1263.jpg" images %}
 
 I looove the basket life but I'm not actually sure I love riding with a basket on the dirt. It's so rattle-y. But it is nice to have the bars completely free for maximum hand space. I dunno what I'll do in the long-term.
 
