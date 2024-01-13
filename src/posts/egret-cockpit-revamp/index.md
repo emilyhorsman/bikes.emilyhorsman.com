@@ -1,6 +1,6 @@
 ---
 date: "2024-01-10T23:48:00-08:00"
-title: Cockpit Revamp on Egret
+title: Cockpit Revamp and New Brake Pads on Egret
 summary: TODO
 banner_image:
   alt:
@@ -8,7 +8,7 @@ tags:
   - projects
   - egret
   - bike fit
-repair: TODO
+repair: Switched to small GP1 Evo grips, moved the brake levers around, re-wrapped the inner bar ends, replaced the front brake pads, and bled the front brake.
 draft: true
 ---
 
