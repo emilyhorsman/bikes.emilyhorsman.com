@@ -30,7 +30,7 @@ function getImageFilename(src, width, format) {
 export function getSharpOptions(data) {
   const options = {
     concurrency: 20,
-    sharpAvifOptions: { quality: 45, effort: 6 },
+    sharpAvifOptions: {},
     filenameFormat: function (_, src, width, format) {
       return getImageFilename(src, width, format);
     },
