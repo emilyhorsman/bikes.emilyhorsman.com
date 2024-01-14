@@ -39,6 +39,7 @@ export async function getSharpOptions(data, name, rootDir) {
   const options = {
     concurrency: 20,
     sharpAvifOptions: sharpOptions.avif ?? {},
+    sharpWebpOptions: sharpOptions.webp ?? {},
     filenameFormat: function (_, src, width, format) {
       return getImageFilename(src, width, format);
     },

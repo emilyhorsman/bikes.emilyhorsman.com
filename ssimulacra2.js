@@ -25,22 +25,35 @@ async function compareImages(referenceImagePath, comparisonImagePath) {
   return Number(stdout);
 }
 
-async function getAvifPng(referenceImagePath, options) {
-  const comparisonAvifPath = await tmpName({ postfix: ".avif" });
+async function getPng(format, func) {
+  const comparisonPath = await tmpName({ postfix: format });
   const startTimeMs = performance.now();
-  await sharp(referenceImagePath).avif(options).toFile(comparisonAvifPath);
+  await func(comparisonPath);
   const endTimeMs = performance.now();
-  const stats = await stat(comparisonAvifPath);
+  const stats = await stat(comparisonPath);
   return {
     stats,
-    path: await convertToPNG(comparisonAvifPath),
+    path: await convertToPNG(comparisonPath),
     durationMs: endTimeMs - startTimeMs,
   };
 }
 
-async function findAvifQuality(
+async function getAvifPng(referenceImagePath, options) {
+  return await getPng(".avif", async (comparisonAvifPath) => {
+    await sharp(referenceImagePath).avif(options).toFile(comparisonAvifPath);
+  });
+}
+
+async function getWebpPng(referenceImagePath, options) {
+  return await getPng(".webp", async (comparisonWebpPath) => {
+    await sharp(referenceImagePath).webp(options).toFile(comparisonWebpPath);
+  });
+}
+
+async function findFormatQuality(
   referenceFullSizeImagePath,
-  targetScore = 65,
+  getPngFunc = getAvifPng,
+  targetScore = 60,
   tolerance = 2
 ) {
   const referenceImagePath = await tmpName();
@@ -60,7 +73,7 @@ async function findAvifQuality(
         qualityLowerBound + (qualityUpperBound - qualityLowerBound) / 2
       ),
     };
-    const { path: comparisonPngPath, ...results } = await getAvifPng(
+    const { path: comparisonPngPath, ...results } = await getPngFunc(
       referenceImagePath,
       options
     );
@@ -128,11 +141,16 @@ async function getSharpData(dir, data) {
     }
     console.log({ hash, name });
 
-    const avifResults = await findAvifQuality(imagePath);
+    const avifResults = await findFormatQuality(imagePath, getAvifPng);
+    const webpResults = await findFormatQuality(imagePath, getWebpPng);
+    console.log({ avifResults, webpResults });
     existingData[name] = {
       sha256: hash,
       avif: {
         quality: avifResults.quality,
+      },
+      webp: {
+        quality: webpResults.quality,
       },
     };
   }
