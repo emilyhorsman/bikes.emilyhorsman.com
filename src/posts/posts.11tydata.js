@@ -35,7 +35,11 @@ const eleventyComputed = {
         widths: [2].map((scale) => 768 * scale),
         formats: ["webp"],
         outputDir,
-        ...getSharpOptions(data.banner_image),
+        ...getSharpOptions(
+          data.banner_image,
+          path.basename(src),
+          data.eleventy.env.root
+        ),
       });
 
       return `${metadata.webp[0].url}`;

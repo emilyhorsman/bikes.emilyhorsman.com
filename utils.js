@@ -2,6 +2,7 @@ import "dotenv/config";
 
 import { glob } from "glob";
 import * as path from "path";
+import { readFile } from "node:fs/promises";
 
 export async function getBannerImageSrc(page, data) {
   if (data.banner_image?.src) {
@@ -27,10 +28,17 @@ function getImageFilename(src, width, format) {
   return `${name}-${width}.${format}`;
 }
 
-export function getSharpOptions(data) {
+export async function getSharpOptions(data, name, rootDir) {
+  const sharpOptions =
+    name && rootDir
+      ? JSON.parse(
+          await readFile(path.join(rootDir, "src", "_data", "sharp.json"))
+        )[name] ?? {}
+      : {};
+
   const options = {
     concurrency: 20,
-    sharpAvifOptions: {},
+    sharpAvifOptions: sharpOptions.avif ?? {},
     filenameFormat: function (_, src, width, format) {
       return getImageFilename(src, width, format);
     },

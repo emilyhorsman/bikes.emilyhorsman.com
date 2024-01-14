@@ -146,7 +146,11 @@ async function image(naiveSrc, altOrOptions, photoCredit = false, width = 768) {
     imageData = altOrOptions[path.basename(naiveSrc)];
     htmlOptions.alt = imageData.alt;
   }
-  const sharpOptions = getSharpOptions(imageData);
+  const sharpOptions = await getSharpOptions(
+    imageData,
+    path.basename(naiveSrc),
+    this.eleventy.env.root
+  );
 
   const metadata = await Image(src, {
     widths: [1, 1.5, 2].map((scale) => width * scale),
@@ -188,7 +192,11 @@ async function bannerImage(post) {
     widths: [1, 1.5, 2].map((scale) => 768 * scale),
     formats: ["avif", "webp"],
     outputDir,
-    ...getSharpOptions(post.data.banner_image),
+    ...(await getSharpOptions(
+      post.data.banner_image,
+      path.basename(src),
+      post.data.eleventy.env.root
+    )),
   });
 
   const pictureElement = EleventyImg.generateHTML(metadata, {
