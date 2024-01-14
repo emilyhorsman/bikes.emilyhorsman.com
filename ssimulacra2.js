@@ -2,8 +2,11 @@ import { promisify } from "node:util";
 import { exec as exec_ } from "node:child_process";
 import sharp from "sharp";
 import { tmpName as tmpName_, setGracefulCleanup } from "tmp";
-import { stat } from "fs/promises";
+import { stat, readFile, writeFile } from "fs/promises";
 import { performance } from "node:perf_hooks";
+import { glob } from "glob";
+import { createHash } from "crypto";
+import * as path from "path";
 
 const exec = promisify(exec_);
 const tmpName = promisify(tmpName_);
@@ -46,26 +49,23 @@ async function findAvifQuality(
     .jpeg({ quality: 90 })
     .toFile(referenceImagePath);
   const referenceStats = await stat(referenceImagePath);
-  console.log({ size: referenceStats.size / (1024 * 1024) });
   const referencePngPath = await convertToPNG(referenceImagePath);
   let qualityLowerBound = 30;
   let qualityUpperBound = 80;
   let score = null;
+  let comparisonStats = null;
   for (let safety = 0; safety < 10; safety++) {
     const options = {
       quality: Math.round(
         qualityLowerBound + (qualityUpperBound - qualityLowerBound) / 2
       ),
     };
-    console.log({
-      qualityLowerBound,
-      qualityUpperBound,
-      quality: options.quality,
-    });
-    const { path: comparisonPngPath, stats: comparisonStats } =
-      await getAvifPng(referenceImagePath, options);
+    const { path: comparisonPngPath, ...results } = await getAvifPng(
+      referenceImagePath,
+      options
+    );
+    comparisonStats = results.stats;
     score = await compareImages(referencePngPath, comparisonPngPath);
-    console.log({ options, score, size: comparisonStats.size / (1024 * 1024) });
     if (score < targetScore + tolerance && score > targetScore - tolerance) {
       qualityLowerBound = options.quality;
       qualityUpperBound = options.quality;
@@ -77,7 +77,12 @@ async function findAvifQuality(
       qualityLowerBound = options.quality;
     }
   }
-  console.log({ qualityLowerBound, qualityUpperBound, score });
+  return {
+    quality: qualityUpperBound,
+    score,
+    size: comparisonStats.size,
+    compressionRatio: comparisonStats.size / referenceStats.size,
+  };
 }
 
 async function compareAvifEffort(referenceFullSizeImagePath) {
@@ -106,4 +111,33 @@ async function compareAvifEffort(referenceFullSizeImagePath) {
   }
 }
 
-await compareAvifEffort(process.argv[2]);
+async function getHash(path) {
+  const hash = createHash("sha256");
+  hash.update(await readFile(path));
+  return hash.digest().toString("hex");
+}
+
+async function getSharpData(dir, data) {
+  const existingData = JSON.parse(await readFile(data));
+  const imagePaths = await glob(`${dir}/**/*.jpg`);
+  for (const imagePath of imagePaths) {
+    const hash = await getHash(imagePath);
+    const name = path.basename(imagePath);
+    if (existingData[name]?.sha256 === hash) {
+      continue;
+    }
+    console.log({ hash, name });
+
+    const avifResults = await findAvifQuality(imagePath);
+    existingData[name] = {
+      sha256: hash,
+      avif: {
+        quality: avifResults.quality,
+      },
+    };
+  }
+
+  await writeFile(data, JSON.stringify(existingData));
+}
+
+await getSharpData(process.argv[2], process.argv[3]);
