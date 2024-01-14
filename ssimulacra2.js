@@ -3,6 +3,7 @@ import { exec as exec_ } from "node:child_process";
 import sharp from "sharp";
 import { tmpName as tmpName_, setGracefulCleanup } from "tmp";
 import { stat } from "fs/promises";
+import { performance } from "node:perf_hooks";
 
 const exec = promisify(exec_);
 const tmpName = promisify(tmpName_);
@@ -23,9 +24,15 @@ async function compareImages(referenceImagePath, comparisonImagePath) {
 
 async function getAvifPng(referenceImagePath, options) {
   const comparisonAvifPath = await tmpName({ postfix: ".avif" });
+  const startTimeMs = performance.now();
   await sharp(referenceImagePath).avif(options).toFile(comparisonAvifPath);
+  const endTimeMs = performance.now();
   const stats = await stat(comparisonAvifPath);
-  return { stats, path: await convertToPNG(comparisonAvifPath) };
+  return {
+    stats,
+    path: await convertToPNG(comparisonAvifPath),
+    durationMs: endTimeMs - startTimeMs,
+  };
 }
 
 async function findAvifQuality(
@@ -73,4 +80,30 @@ async function findAvifQuality(
   console.log({ qualityLowerBound, qualityUpperBound, score });
 }
 
-await findAvifQuality(process.argv[2]);
+async function compareAvifEffort(referenceFullSizeImagePath) {
+  const referenceImagePath = await tmpName();
+  await sharp(referenceFullSizeImagePath)
+    .resize(1536)
+    .jpeg({ quality: 90 })
+    .toFile(referenceImagePath);
+  const referenceStats = await stat(referenceImagePath);
+  console.log({ size: referenceStats.size / (1024 * 1024) });
+  const referencePngPath = await convertToPNG(referenceImagePath);
+  for (let effort = 0; effort <= 9; effort++) {
+    const options = { quality: 60, effort };
+    const {
+      path: comparisonPngPath,
+      stats: comparisonStats,
+      durationMs,
+    } = await getAvifPng(referenceImagePath, options);
+    const score = await compareImages(referencePngPath, comparisonPngPath);
+    console.log({
+      score,
+      effort,
+      size: comparisonStats.size / (1024 * 1024),
+      durationMs,
+    });
+  }
+}
+
+await compareAvifEffort(process.argv[2]);
