@@ -7,6 +7,7 @@ import { performance } from "node:perf_hooks";
 import { glob } from "glob";
 import { createHash } from "crypto";
 import * as path from "path";
+import { Worker, isMainThread, parentPort, workerData } from "worker_threads";
 
 const exec = promisify(exec_);
 const tmpName = promisify(tmpName_);
@@ -53,8 +54,8 @@ async function getWebpPng(referenceImagePath, options) {
 async function findFormatQuality(
   referenceFullSizeImagePath,
   getPngFunc = getAvifPng,
-  targetScore = 60,
-  tolerance = 2
+  targetScore = 65,
+  tolerance = 1
 ) {
   const referenceImagePath = await tmpName();
   await sharp(referenceFullSizeImagePath)
@@ -133,18 +134,44 @@ async function getHash(path) {
 async function getSharpData(dir, data) {
   const existingData = JSON.parse(await readFile(data));
   const imagePaths = await glob(`${dir}/**/*.jpg`);
-  for (const imagePath of imagePaths) {
-    const hash = await getHash(imagePath);
-    const name = path.basename(imagePath);
-    if (existingData[name]?.sha256 === hash) {
+  const results = await Promise.all(
+    imagePaths.map(
+      (imagePath) =>
+        new Promise((resolve, reject) => {
+          const worker = new Worker("./ssimulacra2.js", {
+            workerData: { imagePath, existingData },
+          });
+          console.log({ imagePath, threadId: worker.threadId });
+          worker.on("message", resolve);
+          worker.on("error", reject);
+        })
+    )
+  );
+
+  for (const result of results) {
+    if (!result) {
       continue;
     }
-    console.log({ hash, name });
+    const { name, output, avifResults, webpResults } = result;
+    console.log({ name, avifResults, webpResults });
+    existingData[name] = output;
+  }
 
-    const avifResults = await findFormatQuality(imagePath, getAvifPng);
-    const webpResults = await findFormatQuality(imagePath, getWebpPng);
-    console.log({ avifResults, webpResults });
-    existingData[name] = {
+  await writeFile(data, JSON.stringify(existingData));
+}
+
+async function getSharpDataForPath({ imagePath, existingData }) {
+  const hash = await getHash(imagePath);
+  const name = path.basename(imagePath);
+  if (existingData[name]?.sha256 === hash) {
+    return;
+  }
+
+  const avifResults = await findFormatQuality(imagePath, getAvifPng);
+  const webpResults = await findFormatQuality(imagePath, getWebpPng);
+  return {
+    name,
+    output: {
       sha256: hash,
       avif: {
         quality: avifResults.quality,
@@ -152,10 +179,14 @@ async function getSharpData(dir, data) {
       webp: {
         quality: webpResults.quality,
       },
-    };
-  }
-
-  await writeFile(data, JSON.stringify(existingData));
+    },
+    avifResults,
+    webpResults,
+  };
 }
 
-await getSharpData(process.argv[2], process.argv[3]);
+if (isMainThread) {
+  await getSharpData(process.argv[2], process.argv[3]);
+} else {
+  parentPort.postMessage(await getSharpDataForPath(workerData));
+}
