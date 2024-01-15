@@ -8,28 +8,20 @@ tags:
   - riding
 images:
   R0007718.jpg:
-    q: 60
     alt: A coyote howling in the grass in front of a line of trees.
   DSCF1008.jpg:
-    q: 70
     alt: Looking from the side on a hill at Kat biking across a dirt path between a lot of trees.
   DSCF1007.jpg:
-    q: 70
     alt: Kat biking up a dirt trail just off the road with a cone of light from her dynamo and tree leaves framing her.
   DSCF0896.jpg:
-    q: 80
     alt: An unfolded brown Brompton resting against a barrier in front of Ocean Beach. A blurry dog is running across the foreground.
   DSCF0838.jpg:
-    q: 70
     alt: Looking south on the median of the Great Highway with many people walking and cycling. A dramatic sunlit cloud is rolling through in the background.
   DSCF0831.jpg:
-    q: 70
     alt: Ice plant in the foreground, then the sidewalk on the beach, the sand dunes, and the Pacific Ocean.
   R0007695.jpg:
-    q: 80
     alt: Looking at Kat riding her BB-1 from behind at golden hour.
   DSCF0536.jpg:
-    q: 80
     alt: Kat riding down a hill at the edge of the Presidio with lots of fog.
 ---
 
