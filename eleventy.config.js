@@ -6,6 +6,7 @@ import * as path from "path";
 import MarkdownIt from "markdown-it";
 import MarkdownItFootnote from "markdown-it-footnote";
 import MarkdownItPlainText from "markdown-it-plain-text";
+import MarkdownItAnchor from "markdown-it-anchor";
 import { getBannerImageSrc, getSharpOptions } from "./utils.js";
 import posthtml from "posthtml";
 import posthtmlMinifyClassnames from "posthtml-minify-classnames";
@@ -19,6 +20,7 @@ const mdLib = MarkdownIt({
 })
   .use(markdownLink)
   .use(MarkdownItFootnote)
+  .use(MarkdownItAnchor)
   .use(MarkdownItPlainText);
 mdLib.renderer.rules.footnote_caption = renderFootnoteCaption;
 
