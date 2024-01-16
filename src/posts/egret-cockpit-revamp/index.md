@@ -28,6 +28,8 @@ One thing I don't like about the GP1 and GC1 grips are their outboard metal clam
 
 I'm not sure I'm totally happy with the GP1 grips yet but it's hard to tell when my wrists flare up. I'm trying to avoid the temptation to change the bike too much just because I'm having a possibly unrelated flare-up.
 
+I also ended up getting rid of my [mirrcycle mirror](https://mirrycle.com/product/mirrycle-mirror/). It was fine. I liked it for seeing if Kat or my friends were close behind me and occasionally for cars. I think a larger mirror would be more useful. This one was small enough that fine adjustments made huge differences in sight. It was also getting hard to adjust — too tight and it was super stiff but any looser and it wouldn't hold its position. I didn't try sorting that out but probably should've. One week later and I do kind of miss it. But I also like how much cleaner the cockpit is without it.
+
 ## Positioning
 
 I also wanted to get my brake levers further inboard so that my index fingers and wrists don't have to change angles to have my finger on the furthest part of the lever blade. This worked out pretty well. I had to move the bell and e-bike controls around. I do wish these bars were less crowded.
