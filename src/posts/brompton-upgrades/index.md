@@ -1,5 +1,5 @@
 ---
-date: "2024-01-17T00:00:00-08:00"
+date: "2024-01-17T08:00:00-08:00"
 title: Brompton Upgrades
 summary: Ezy Superior quick release pedals and dynamo lighting for the toodling around bike.
 banner_image:
@@ -8,7 +8,6 @@ tags:
   - projects
   - n judah explore
 repair: Installed a pair of SimWorks Bubbly pedals, a SON XS dynamo wheel with an Edelux II and Busch+Müller Topline Plus, and the first-party eazy wheels.
-draft: true
 ---
 
 I love toodling around on this bike!! It's become my favorite bike on my 2.5km commute to the bike shop — I just bike past the counter to my bench and fold it up. The bag is perfect for what I need for the shop, and it makes the straight-line down JFK Promenade nimble and fun. I'm kind of excited to try commuting to my day job on it. Anywho, I made some fun upgrades to it.
