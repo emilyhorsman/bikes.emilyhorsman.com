@@ -10,7 +10,7 @@
       eleventy: eleventy
     %}
   </head>
-  <body>
+  <body class="{{ body_class }}">
     {% if draft %}
       <div class="draft-banner"><p>This is a draft post. Please don't share until it's done!</p></div>
     {% endif %}

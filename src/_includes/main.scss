@@ -249,6 +249,14 @@ header {
   }
 }
 
+body.home header {
+  margin-bottom: $gutter;
+}
+
+body.home main p:first-child {
+  margin-bottom: $gutter * 2;
+}
+
 .series-list {
   margin-top: 1rem;
 
