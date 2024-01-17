@@ -20,7 +20,7 @@
     "devDependencies": {
         "@shopify/prettier-plugin-liquid": "^1.4.1",
         "glob": "^10.3.10",
-        "prettier": "^3.2.3",
+        "prettier": "^3.2.4",
         "sharp": "^0.33.2",
         "tmp": "^0.2.1"
     }
