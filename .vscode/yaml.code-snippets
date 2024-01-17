@@ -1,0 +1,9 @@
+{
+  "thought": {
+    "prefix": "thought",
+    "body": [
+      "- date: $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND$CURRENT_TIMEZONE_OFFSET",
+      "  post: $1"
+    ]
+  }
+}
