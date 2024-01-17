@@ -11,29 +11,29 @@ repair: Installed a pair of SimWorks Bubbly pedals, a SON XS dynamo wheel with a
 draft: true
 ---
 
-I love toodling around on this bike!! It's become my favourite bike to take on my 2.5km commute to the bike shop — I just bike right past the counter to my bench and fold it up. The bag is perfect for what I need for the shop and it makes the straight-line down JFK Promenade nimble and fun. I'm kind of excited to try commuting to my day job on it. Anywho, I made some fun upgrades to it.
+I love toodling around on this bike!! It's become my favorite bike on my 2.5km commute to the bike shop — I just bike past the counter to my bench and fold it up. The bag is perfect for what I need for the shop, and it makes the straight-line down JFK Promenade nimble and fun. I'm kind of excited to try commuting to my day job on it. Anywho, I made some fun upgrades to it.
 
 ## Bubbly Pedals
 
-I love these!! Now I match Ben's bike! They're pretty grippy too — I rode over some really chunky cobblestone and it felt totally fine. Kat once described a pedal upgrade as feeling like "a contact point was missing." That seems about right here. The stock pedals are simply okay. They're definitely too small for my wide feet.
+I love these!! Now I match Ben's bike! They're pretty grippy, too — everything felt totally fine over some really chunky cobblestone. Kat once described a pedal upgrade as feeling like "a contact point was missing." That seems about right here. The stock pedals are simply okay. They're definitely too small for my wide feet.
 
-The quick release mechanism is not as fast as folding the stock left-hand pedal but that's okay for me.
+The quick-release mechanism is slower than folding the stock left-hand pedal, but that's okay for me.
 
 {% image "DSCF1677.jpg" "A polished silver pedal engraved 'Bubbly' with a bunch of bubble-looking holes in it. It is casting a shadow on the crank arm." %}
 
 ## Dynamo Lighting!
 
-I got the 'semi-radially' laced [SON XS hub](https://nabendynamo.de/en/products/hub-dynamos/for-folding-bikes/) on a stock Brompton rim. These are the hubs that SON makes for a 16" wheel with a 74mm OLD. It came from [Peter White](https://www.peterwhitecycles.com) with a nice bolt-on skewer — stoked to have access to the front wheel with a 4mm allen instead of a 15mm wrench.
+I got the 'semi-radially' laced [SON XS hub](https://nabendynamo.de/en/products/hub-dynamos/for-folding-bikes/) on a stock Brompton rim. These are the hubs that SON makes for a 16" wheel with a 74mm OLD. It came from [Peter White](https://www.peterwhitecycles.com) with a nice bolt-on skewer. I'm stoked to have access to the front wheel with a 4mm allen instead of a 15mm wrench.
 
 {% image "DSCF1106.jpg" "A spinning front dynamo wheel on a small Brompton fork hanging in a bike stand. No wiring or lights yet." %}
 
-In the front is a [SON Edelux II](https://nabendynamo.de/en/products/headlights/edelux-2/). You can tell there's a bit of tire and bag shadow. That's okay for now. There's still plenty of good beam[^2] on the road. It's mounted on the stock Brompton dynamo front bracket. I'm curious about Perennial Cycle's [beefier one](https://www.perennialcycle.com/heavy-duty-brompton-headlight-bracket.html) but I think it solves a problem I don't have. I would like to try something longer to get past the tire/bag shadow.
+In the front is a [SON Edelux II](https://nabendynamo.de/en/products/headlights/edelux-2/). You can tell there's a bit of tire and bag shadow. That's okay for now. There's still plenty of good beam[^2] on the road. It's mounted on the stock Brompton dynamo front bracket. I'm curious about Perennial Cycle's [beefier one](https://www.perennialcycle.com/heavy-duty-brompton-headlight-bracket.html), but I think it solves a problem I don't have. I _would_ like to try something longer to get past the tire/bag shadow.
 
 [^2]: 😏
 
 {% image "DSCF1654.jpg" "A close up of an Edelux II dynamo light mounted above the front wheel of a Brompton." %}
 
-And in the rear is a [Busch + Müller Toplight Line Plus](https://www.bumm.de/en/products/dynamo-rucklichter/produkt/323alt.html?). Very bright and the 50mm mount spacing was a trivial swap from the stock Brompton reflector.
+And in the rear is a [Busch + Müller Toplight Line Plus](https://www.bumm.de/en/products/dynamo-rucklichter/produkt/323alt.html?). Very bright, and the 50mm mount spacing was a trivial swap from the stock Brompton reflector.
 
 {% image "DSCF1650.jpg" "The rear of a Brompton leaned against a tree with its large rear light on." %}
 
@@ -41,7 +41,7 @@ Really pleased! I was going around Golden Gate Park at dusk and went into one of
 
 {% image "DSCF1688.jpg" "A Brompton leaned against a concrete wall in dim light with a strong rear red light and front light with tire and bag shadow." %}
 
-Doing the dynamo routing with [SON Coax](https://nabendynamo.de/en/products/wiring/) cable and the Brompton instructions on routing was fairly easy. I didn't cut anything to size yet. It was one of the smoothest dynamo installations I've done since there's a preordained place for everything.
+Doing the dynamo routing with [SON Coax](https://nabendynamo.de/en/products/wiring/) cable and the Brompton instructions on routing was fairly easy. I haven't cut anything to size yet. It was one of the smoothest dynamo installations I've done since there's a preordained place for everything.
 
 ## Eazy Wheels
 
