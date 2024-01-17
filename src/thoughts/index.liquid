@@ -13,7 +13,7 @@ title: Thoughts
 {% for thought in thoughts %}
   {% assign id = thought.date | date: '%s' %}
   <a
-    href="/thoughts/{{ id }}-{{ thought.post | markdownplain | truncatewords: 6, '' | slugify }}"
+    href="/thoughts/{{ id }}-{{ thought.post | markdownplain | truncatewords: 6, '' | slugify }}/"
     class="thoughts-link"
   >
     <time datetime="{{ thought.date | date: '%Y-%m-%dT%H:%M:%S%z' }}" id="{{ id }}">

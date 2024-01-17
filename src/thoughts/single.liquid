@@ -4,7 +4,7 @@ pagination:
   alias: thought
   size: 1
   addAllPagesToCollections: true
-permalink: "/thoughts/{{ thought.date | date: '%s' }}-{{ thought.post | markdownplain | truncatewords: 6, '' | slugify }}"
+permalink: "/thoughts/{{ thought.date | date: '%s' }}-{{ thought.post | markdownplain | truncatewords: 6, '' | slugify }}/"
 eleventyComputed:
   title: "{{ thought.post | markdownplain | truncatewords: 4 }}"
   summary: "{{ thought.post | markdownplain | truncatewords: 40 }}"
