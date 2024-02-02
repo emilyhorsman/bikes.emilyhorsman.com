@@ -54,7 +54,7 @@ async function getWebpPng(referenceImagePath, options) {
 async function findFormatQuality(
   referenceFullSizeImagePath,
   getPngFunc = getAvifPng,
-  targetScore = 65,
+  targetScore = 70,
   tolerance = 1
 ) {
   const referenceImagePath = await tmpName();
@@ -143,13 +143,17 @@ async function getSharpData(dir, data) {
           });
           console.log({ imagePath, threadId: worker.threadId });
           worker.on("message", resolve);
-          worker.on("error", reject);
+          worker.on("error", (err) => {
+            console.log(err);
+            reject(err);
+          });
         })
     )
   );
 
   for (const result of results) {
     if (!result) {
+      console.log("missing result");
       continue;
     }
     const { name, output, avifResults, webpResults } = result;
@@ -164,6 +168,7 @@ async function getSharpDataForPath({ imagePath, existingData }) {
   const hash = await getHash(imagePath);
   const name = path.basename(imagePath);
   if (existingData[name]?.sha256 === hash) {
+    console.log("hash matches");
     return;
   }
 
