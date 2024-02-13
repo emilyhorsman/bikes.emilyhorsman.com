@@ -2,9 +2,9 @@
     "type": "module",
     "dependencies": {
         "@11ty/eleventy": "^3.0.0-alpha.4",
-        "@11ty/eleventy-img": "^4.0.1",
+        "@11ty/eleventy-img": "^4.0.2",
         "cssnano": "^6.0.3",
-        "dotenv": "^16.4.1",
+        "dotenv": "^16.4.3",
         "htmlnano": "^2.1.0",
         "js-yaml": "^4.1.0",
         "markdown-it": "^14.0.0",
