@@ -42,7 +42,7 @@ I initially thought the derailleur looked kind of ugly. It's a lot like its pret
 
 Disappointingly, they don't offer a silver cassette. This one is black with an interesting finish that catches the light in a fun way — I don't hate it. The old cassette that came with the bike had dug into my aluminum freehub body splines pretty badly. I should've taken a photo. It took about ten minutes to get the cassette off the splines. This CS-LG700 cassette has an aluminum carrier so hopefully I won't have the same problem. This bike will probably have a steel freehub body in its future.
 
-This chainring bumped the front chainline from 50mm to 46.5mm. It's pretty extreme for the non-boost 135mm spacing in the rear. Seems to work fine so far but it's definitely not ideal. Chainline is probably bullshit until it isn't anyway.
+This chainring bumped the front chainline from 46.5mm to 50mm. It's pretty extreme for the non-boost 135mm spacing in the rear. Seems to work fine so far but it's definitely not ideal. Chainline is probably bullshit until it isn't anyway.
 
 {% image "DSCF5178.jpg" "A blue e-bike in front of a forest of eucalyptus trees" %}
 
