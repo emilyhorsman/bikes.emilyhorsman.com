@@ -4,7 +4,7 @@
         "@11ty/eleventy": "^3.0.0-alpha.4",
         "@11ty/eleventy-img": "^4.0.2",
         "cssnano": "^6.0.3",
-        "dotenv": "^16.4.3",
+        "dotenv": "^16.4.5",
         "htmlnano": "^2.1.0",
         "js-yaml": "^4.1.0",
         "markdown-it": "^14.0.0",
@@ -13,12 +13,12 @@
         "markdown-it-plain-text": "^0.3.0",
         "posthtml": "^0.16.6",
         "posthtml-minify-classnames": "^0.4.0",
-        "sass": "^1.70.0",
+        "sass": "^1.71.0",
         "uncss": "^0.17.3",
         "uuid": "^9.0.1"
     },
     "devDependencies": {
-        "@shopify/prettier-plugin-liquid": "^1.4.2",
+        "@shopify/prettier-plugin-liquid": "^1.4.3",
         "glob": "^10.3.10",
         "prettier": "^3.2.5",
         "sharp": "^0.33.2",
