@@ -50,4 +50,6 @@ And back in its home. Feels like new again! Strava puts this bike at 1840.3 km s
 
 {% image "DSCF4579.jpg" "Serviced pedal installed back in the crank of an e-bike" %}
 
-Update: I went to do the same on the left pedal and the never-before-used Philips bolt on the grease port is seized. I find that once a bolt is seized you can't use enough torque to free it before stripping a Philips head. Awful things. Follow-up post when I get it out with a bolt extractor.
+Update: I went to do the same on the left pedal and the never-before-used Philips bolt on the grease port is seized. I find that once a bolt is seized you can't use enough torque to free it before stripping a Philips head. Awful things. [Follow-up post](/posts/grease-port-bolt-extraction/) when I get it out with a bolt extractor.
+
+Update 2: I just checked on Feb 25, 2024 and they have more play than ever! That didn't last long. Debating whether to ride these until it's a problem (and keep filling with grease in the meantime) or to try something new.

@@ -3,7 +3,7 @@
     "dependencies": {
         "@11ty/eleventy": "^3.0.0-alpha.5",
         "@11ty/eleventy-img": "^4.0.2",
-        "cssnano": "^6.0.4",
+        "cssnano": "^6.0.5",
         "dotenv": "^16.4.5",
         "htmlnano": "^2.1.0",
         "js-yaml": "^4.1.0",
