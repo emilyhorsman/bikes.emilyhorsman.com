@@ -1,18 +1,21 @@
 ---
-date: "2024-03-01T17:20:00-08:00"
+date: "2024-03-02T10:20:00-08:00"
 title: "February 2024 Riding Highlights"
 summary: TODO
 banner_image:
   alt: TODO
 tags:
   - riding
-draft:
-  - true
+draft: true
 ---
 
 ## 2nd
 
+I biked/walked around the paths in the dunes a bit instead of on the Great Walkway proper. Only until Lawton and then turned around for a bit more trail riding in the park.
+
 {% image "L1008517.jpg" "" %}
+
+And ended up at Corona Heights in the evening with rain clouds over the skyline.
 
 {% image "L1008592.jpg" "" %}
 
