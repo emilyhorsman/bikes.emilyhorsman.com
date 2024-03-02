@@ -18,10 +18,10 @@
         "uuid": "^9.0.1"
     },
     "devDependencies": {
-        "@shopify/prettier-plugin-liquid": "^1.4.3",
+        "@shopify/prettier-plugin-liquid": "^1.4.4",
         "glob": "^10.3.10",
         "prettier": "^3.2.5",
         "sharp": "^0.33.2",
-        "tmp": "^0.2.1"
+        "tmp": "^0.2.3"
     }
 }
