@@ -19,6 +19,7 @@ const mdLib = MarkdownIt({
   linkify: true,
 })
   .use(markdownLink)
+
   .use(MarkdownItFootnote)
   .use(MarkdownItAnchor)
   .use(MarkdownItPlainText);
@@ -36,6 +37,7 @@ export default (c) => {
 
     const result = await posthtml()
       .use(eagerFirstImagesPlugin)
+      .use(headerSuperscriptPlugin)
       .use(
         posthtmlMinifyClassnames({
           removeUnfound: true,
@@ -225,5 +227,24 @@ function eagerFirstImagesPlugin(tree) {
       numSet++;
     }
     return node;
+  });
+}
+
+const HEADER_SUPERSCRIPT_REGEX = new RegExp(/\b(\d{1,2})(st|nd|rd|th)\b/);
+
+function headerSuperscriptPlugin(tree) {
+  tree.match({ tag: "h2" }, (node) => {
+    if (!node.attrs || node.attrs.tabindex !== "-1") {
+      return node;
+    }
+    if (!node.content) {
+      return node;
+    }
+    return {
+      ...node,
+      content: node.content.map((content) => {
+        return content.replace(HEADER_SUPERSCRIPT_REGEX, "$1<sup>$2</sup>");
+      }),
+    };
   });
 }
