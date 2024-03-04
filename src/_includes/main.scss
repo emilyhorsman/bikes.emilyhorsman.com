@@ -178,7 +178,8 @@ main {
     margin: 1rem 0;
   }
 
-  .image-container + .image-container {
+  .image-container + .image-container,
+  h2 + .image-container {
     margin-top: 1rem;
   }
 
