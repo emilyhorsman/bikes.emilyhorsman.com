@@ -13,5 +13,5 @@ ffmpeg -i ducks.mp4 -ss 00:00:01.000 -vframes 1 ducks.jpg
 ## rclone
 
 ```
-img $ rclone sync . r2:cdn/ -P --track-renames
+_site/img $ rclone sync . r2:cdn/ -P --track-renames
 ```
