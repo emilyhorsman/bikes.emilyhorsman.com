@@ -7,15 +7,12 @@ pagination:
   reverse: true
   addAllPagesToCollections: true
 body_class: home
-summary: An indieweb blog for my bike projects, maintenance, and riding. Bikes are utilitarian dream machines that I use for a chill lifestyle of transportation and joy.
+summary: An indieweb blog for my bike projects, riding, and life.
 ---
 {% layout 'base.liquid' %}
 
 {% block main %}
-<p>
-  An <a href="https://indieweb.org/" target="_blank">indieweb</a> blog for my bike projects, maintenance, and riding.
-  Bikes are utilitarian dream machines that I use for a chill lifestyle of transportation and joy.
-</p>
+<p>An <a href="https://indieweb.org/" target="_blank">indieweb</a> blog for my bike projects, riding, and life.</p>
 
 {% for post in pagination.items %}
   {% render 'post_summary.liquid', post: post, tags_metadata: tags_metadata %}
