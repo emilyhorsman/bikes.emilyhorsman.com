@@ -4,7 +4,6 @@ title: "December 2024 Clancy's Tree"
 summary: Grabbing a tree for Scenic Routes from Clancy's — as per tradition.
 banner_image:
   alt: Ben and Kat with their hands in a Christmas tree, holding it upright.
-draft: true
 tags:
   - riding
 ---
