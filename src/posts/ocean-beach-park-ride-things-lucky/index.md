@@ -1,5 +1,5 @@
 ---
-date: "2024-12-13T21:15:00-08:00"
+date: "2024-12-14T11:09:00-08:00"
 title: "Ocean Beach Park Ride, Things Lucky, and Muni Diaries"
 summary: A little bit of bike riding, a little bit of Michael's band, and Kat's art market.
 banner_image:
