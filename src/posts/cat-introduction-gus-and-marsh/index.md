@@ -6,7 +6,6 @@ banner_image:
   alt: "Marsh pressing his head into Kat's hand for ear scritches."
 tags:
   - cats
-draft: true
 ---
 
 We just brought home a new cat from [Give Me Shelter](https://www.givemesheltersf.org/)! His name (unless we decide to change it) is Marshall, and he's a rescue originating from Stockton, California. It's time to embrace mommy blogging.
