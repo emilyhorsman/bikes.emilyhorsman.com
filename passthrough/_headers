@@ -1,5 +1,5 @@
 /*
-  Access-Control-Allow-Origin: static.cloudflareinsights.com
+  Access-Control-Allow-Origin: https://static.cloudflareinsights.com
 
 /*.webm
   Cache-Control: public, max-age=31536000, immutable
