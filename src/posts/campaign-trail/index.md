@@ -3,7 +3,7 @@ date: "2024-10-14T13:03:00-08:00"
 title: "Campaign Trail"
 summary: Bikes and buses go great together.
 banner_image:
-  alt: TODO
+  alt: The L Taraval Muni train behind a park of green grass and eucalyptus trees.
 tags:
   - egret
 repair: New front brake pads, re-tensioned non-drive side spokes on the rear wheel.
@@ -15,7 +15,7 @@ I've been helping out with [Prop L](https://fundthebus.com) — a measure to fun
 
 [egret](/tags/egret) is in desperate need of some love — the front light isn't working, I changed the front brake pads while waiting for my volunteers to come back from knocking doors, and Kat just re-tensioned some spokes on the rear wheel at a campaign event. I'm pretty sure I've worn the chain way past 1% and that'll just have to be, sadly.
 
-Anyway, I wanted to dump some photos on here and just mention that our volunteers are the absolute best and we are doing incredible work. Please come [join us](https://fundthebus.com/volunteer) if you're in San Francisco or [donate](https://fundthebus.com/donate) if you're in the US! Uber and Lyft have put up [nearly a million dollars](https://www.instagram.com/p/DAb_nIkgT9X/) against us. We're gonna beat them anyway.
+Anyway, I wanted to dump some photos on here and just mention that our volunteers are the absolute best and we are doing incredible work. Uber and Lyft have put up [nearly a million dollars](https://www.instagram.com/p/DAb_nIkgT9X/) against us. We're gonna beat them anyway.
 
 Going all over the city for events has let me stumble upon all the best nooks and crannies of the city. It's the most fulfilling way to get a deeper connection with the place I live. And I'm reminded of my dear late friend Hansel. They were a social worker for the city and went to a lot of the same underappreciated areas of the city we go for the campaign. They always posted the best, casually beautiful photos of little bits of the city — when the light hits the right way or the right colors meet the beloved fog.
 

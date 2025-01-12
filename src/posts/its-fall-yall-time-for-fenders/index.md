@@ -12,7 +12,7 @@ repair: Installed fenders.
 
 I've resisted putting fenders on any of my bikes — I don't love the aesthetic, they feel fragile, and you still need to wear rain gear anyway. However, my Kona Dew-E came with cheap plastic[^1] fenders and some of my favourite riding has been in the wet seasons. I had taken them off when I assembled it but we've started getting rain in San Francisco and I figure it's time. Besides, they protect your drivetrain too and I think it's responsible to have things last as long as possible.
 
-[^1]: I'm fairly sure they're [Sunnywheel polycarbonate fenders](http://www.sunnywheel.com/product?id=2). I couldn't pin down the exact model.
+[^1]: I'm fairly sure they're [Sunnywheel polycarbonate fenders](https://www.sunnywheel.com/pc-fender). I couldn't pin down the exact model.
 
 I don't love the fender dimensions I have to work with here. This bike came with 47mm tires on 19mm internal width rims. The fenders it came with are arguably a little narrow for those. The situation gets tighter because I put a wheelset with wider rims (26.6mm internal width) on and the effective width of the tire is about 50mm. I figured I'd put wider metal [Honjo fenders](https://www.sim.works/collections/fenders-simworks-by-honjo/products/smooth-62-black) on but I don't think the frame can fit them. Not without some shenanigans anyway.[^2]
 

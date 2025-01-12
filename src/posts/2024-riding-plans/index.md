@@ -25,7 +25,7 @@ Notably this is all stuff that doesn't involve the abhorrent act of throwing you
 
 1. [American River Parkway Trail](https://regionalparks.saccounty.gov/Parks/Pages/JedediahSmith.aspx) in Sacramento
 
-   Taking the [ferry](https://sanfranciscobayferry.com/oakland-alameda-ferry-route) from SF to Jack London Square where we can take the Amtrak [Capital Corridor](https://www.amtrak.com/capitol-corridor-train). 32 miles of car-free multi-use path!
+   Taking the [ferry](https://sanfranciscobayferry.com/routes-schedules/oakland-alameda/) from SF to Jack London Square where we can take the Amtrak [Capital Corridor](https://www.amtrak.com/capitol-corridor-train). 32 miles of car-free multi-use path!
 
 1. [San Bruno Mountain](https://www.smcgov.org/parks/san-bruno-mountain-state-county-park)
 

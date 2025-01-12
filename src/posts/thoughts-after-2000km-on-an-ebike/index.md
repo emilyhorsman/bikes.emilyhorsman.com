@@ -64,7 +64,7 @@ banner_image:
 1. Class 2 assists up to 20 mph and has a throttle to assist without pedaling.
 1. Class 3 assists up to 28 mph only[^1] while pedaling.
 
-[^1]: There are also [e-bikes](https://www.specialized.com/us/en/haul-st/p/200057), arguably outside California law, which advertise themselves as a Class 3 e-bike but have a throttle that assists up to 20 mph. The three-class system states that Class 3 e-bikes provide ["assistance only when the rider is pedaling,"](https://peopleforbikes.cdn.prismic.io/peopleforbikes/26118e07-5b1b-4159-92eb-5bd5d684f9b2_E-Bike-Law-Primer_July+2023.pdf) so these probably shouldn't exist.
+[^1]: There are also [e-bikes](https://web.archive.org/web/20240525011735/https://www.specialized.com/us/en/haul-st/p/200057), arguably outside California law, which advertise themselves as a Class 3 e-bike but have a throttle that assists up to 20 mph. The three-class system states that Class 3 e-bikes provide ["assistance only when the rider is pedaling,"](https://peopleforbikes.cdn.prismic.io/peopleforbikes/26118e07-5b1b-4159-92eb-5bd5d684f9b2_E-Bike-Law-Primer_July+2023.pdf) so these probably shouldn't exist.
 
 I've come to think after 2000 km of riding on this bike that it's very difficult to justify the existence of class 2 and 3 e-bikes.[^2] I think there are good accessibility reasons to have a throttle but I'm not convinced it needs to assist as high as 20 mph or be kept on indefinitely. 20 mph is _fast_. I've test-ridden long-tail cargo bikes that assist up to 28 mph and the difference I feel in the power dynamic between myself and other road users is scary.
 
@@ -89,6 +89,7 @@ I ended up buying a Kona Dew-E. The following factors went into it, in no partic
 1. A minimal interface for controlling the motor. This one came with a small screen on the bar beside the stem to read my speed and current assist level. Then a small switch on the left side of my bars lets me rotate through assist choices.
 
 [^5]: My understanding is that one finger braking lets you keep a more relaxed grip on the bar. If you relax all your fingers and then bring your index finger towards your palm like you were braking you'll notice you can still keep your other fingers fairly relaxed. Do the same with your middle finger and you'll notice it's hard to relax your ring finger!
+
 [^6]: n.b.: I have not researched this extensively, and it's mostly an inferred opinion.
 
 {% image "DSCF4723.jpg" "A blue e-bike in a parking space with a Burley trailer hitched to its back" %}

@@ -1,9 +1,9 @@
 ---
 date: "2023-12-06T13:40:01-08:00"
-title: 'Misc: Bike Fit Tweaks and Goings Ons'
+title: "Misc: Bike Fit Tweaks and Goings Ons"
 tags:
-    - misc
-    - egret
+  - misc
+  - egret
 banner_image:
   alt: My hand in a blue wool glove on a brake lever while riding. On the left is a mirror and on the right is a bell.
 summary: Experimenting with some saddle and brake lever adjustments; leash training Gus again; Sarah's new paracord brake locks; and other miscellania.
@@ -48,7 +48,7 @@ My friend Sarah made us all a bunch of cute brake locks with paracord. They work
 
 ## Bench Decorations
 
-My favourite way to decorate my bench at the bike shop is with my friend [Eric](http://www.ericparton.org/)'s wood block prints. New holiday card!
+My favourite way to decorate my bench at the bike shop is with my friend [Eric](https://ericparton.org/)'s wood block prints. New holiday card!
 
 {% image "R0007622.jpg" "A black wood block print thumb tacked to a bench in a bike shop." %}
 
