@@ -24,7 +24,7 @@ So, given that I'm not even a huge fan of fenders, I'm putting on the fenders th
 
 {% image "DSCF4848.jpg" "The front of a blue bike with a silver basket and black fender" %}
 
-I find these knobby tires yeet a bunch of debris up so I tried to get as much clearance as possible on the front. The inner side of the strut attachment points also gets close to the tire so increasing the clearance helps with that. The result is a bit excessive to my taste but they installed easily and the line is fairly even. All the mounting hardware was already set up from the factory so it only took some minor adjustments. I'm pleased that the struts have [safety releases](http://www.sunnywheel.com/accessorie-intro?id=24). If something gets caught, the fender should theoretically release instead of crumpling and locking the front wheel.
+I find these knobby tires yeet a bunch of debris up so I tried to get as much clearance as possible on the front. The inner side of the strut attachment points also gets close to the tire so increasing the clearance helps with that. The result is a bit excessive to my taste but they installed easily and the line is fairly even. All the mounting hardware was already set up from the factory so it only took some minor adjustments. I'm pleased that the struts have [safety releases](https://www.sunnywheel.com/fender-stay-safety-pop-off). If something gets caught, the fender should theoretically release instead of crumpling and locking the front wheel.
 
 I got into some trouble with the rear fender. The clearance at the chainstay bridge was tight and the strut attachment points at the back of the fender also got pretty close. Thus, it's not pretty.
 

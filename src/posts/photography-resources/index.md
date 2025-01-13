@@ -26,3 +26,4 @@ I think it's an incredible era to be into photography. Photography as we conside
 1. So many photographers have great websites were they publish their work. It's often sorted into projects — a lovely way to consume photography. It's so much nicer than looking at a small phone. Here's some I love: [[1]](https://www.xuanhuing.com/) [[2]](https://connor.photo/)
 1. I'm actually going to defend [Flickr](https://www.flickr.com/photos/emilyhorsman/) a little bit, which I know is sort of a wild thing to do in 2025.
 1. I've been enjoying [Elements](https://www.elementsphotomag.com/) magazine for a long time.
+1. Marc Levoy's Lectures on Digital Photography. The course website is [here](https://sites.google.com/site/marclevoylectures/home?authuser=0) and the Internet Archive has the videos [here](https://archive.org/details/marc-levoy-lectures-digital-photography) if ever needed.
