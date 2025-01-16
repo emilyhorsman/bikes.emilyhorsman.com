@@ -230,7 +230,7 @@ function eagerFirstImagesPlugin(tree) {
   });
 }
 
-const HEADER_SUPERSCRIPT_REGEX = new RegExp(/\b(\d{1,2})(st|nd|rd|th)\b/);
+const HEADER_SUPERSCRIPT_REGEX = new RegExp(/\b(\d{1,2})(st|nd|rd|th)\b/g);
 
 function headerSuperscriptPlugin(tree) {
   tree.match({ tag: "h2" }, (node) => {
