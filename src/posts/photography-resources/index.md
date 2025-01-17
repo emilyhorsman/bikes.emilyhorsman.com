@@ -17,7 +17,7 @@ I think it's an incredible era to be into photography. Photography as we conside
 1. [San Francisco Historical Photograph Collection](https://sfpl.org/locations/main-library/historical-photographs)
 1. [Harvey Milk Photo Center](https://www.harveymilkphotocenter.org/) — they have classes and a huge collection of books.
 1. The [Leica store in SF](https://gallery.leicastoresf.com/) has wonderful galleries.[^1]
-1. CCSF has a [photography department](https://ccsfphoto.wordpress.com/) and you can enroll for free if you're a SF resident.
+1. CCSF has a [photography department](https://ccsfphoto.wordpress.com/) and you can enroll for free if you're a SF resident. I'm taking [PHOT 50A (History & Aesthetics Pre-1945)](https://www.ccsf.edu/courses/spring-2025/histaesthetics-pre-1945-35393) and [PHOT 51 (Beginning Photography)](https://www.ccsf.edu/courses/spring-2025/beginning-photography-35590) and it's great!
 
 [^1]: Lucien, the gallery coordinator, is an incredibly sweet person who cares a lot about photography. He also sold me my treasured Leica M!
 
@@ -27,3 +27,8 @@ I think it's an incredible era to be into photography. Photography as we conside
 1. I'm actually going to defend [Flickr](https://www.flickr.com/photos/emilyhorsman/) a little bit, which I know is sort of a wild thing to do in 2025.
 1. I've been enjoying [Elements](https://www.elementsphotomag.com/) magazine for a long time.
 1. Marc Levoy's Lectures on Digital Photography. The course website is [here](https://sites.google.com/site/marclevoylectures/home?authuser=0) and the Internet Archive has the videos [here](https://archive.org/details/marc-levoy-lectures-digital-photography) if ever needed.
+
+## Gear
+
+1. Lensrentals on [UV/Protective Filters](https://www.lensrentals.com/blog/2017/06/the-comprehensive-ranking-of-the-major-uv-filters-on-the-market/)
+1. [Photons to Photos](https://www.photonstophotos.net/)
