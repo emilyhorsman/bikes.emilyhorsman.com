@@ -2,7 +2,7 @@
     "type": "module",
     "dependencies": {
         "@11ty/eleventy": "^3.0.0",
-        "@11ty/eleventy-img": "^6.0.0",
+        "@11ty/eleventy-img": "^6.0.1",
         "cssnano": "^7.0.6",
         "dotenv": "^16.4.7",
         "htmlnano": "^2.1.1",
