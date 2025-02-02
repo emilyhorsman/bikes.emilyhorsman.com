@@ -9,9 +9,10 @@ tags:
 draft: true
 ---
 
-## Blogs
+## Blogs/Articles
 
 1. [what your cat wants](https://whatyourcatwants.com/) by Mikel Delgado
+1. [Is owning pets ethical?](https://www.vox.com/future-perfect/2023/4/11/23673393/pets-dogs-cats-animal-welfare-boredom) Why we should aim for fewer but happier pets.
 
 ## Books
 
