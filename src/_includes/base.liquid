@@ -9,6 +9,12 @@
       banner_image: banner_image,
       eleventy: eleventy
     %}
+    <script
+      defer
+      data-domain="{{ site.baseURL }}"
+      data-api="https://f.emilyhorsman.com/api/event"
+      src="https://f.emilyhorsman.com/f.js"
+    ></script>
   </head>
   <body class="{{ body_class }}">
     {% if draft %}

@@ -15,7 +15,8 @@ no_date: true
 
 ## Technical Bits
 
-1. This website is served on [Cloudflare Pages](https://pages.cloudflare.com) with their [analytics](https://www.cloudflare.com/web-analytics/) turned on. Cloudflare claims their analytics service does not fingerprint users and is "privacy-first." I can confirm that they do not give me individual user details such as IP addresses, cookies, etc. It's always possible they lie and track it for themselves but don't show me. The images are served from a [Cloudflare R2](https://developers.cloudflare.com/r2/) bucket.
+1. This website is served on [Cloudflare Pages](https://pages.cloudflare.com) without their analytics. The images are served from a [Cloudflare R2](https://developers.cloudflare.com/r2/) bucket.
+1. Analytics come from [Plausible](https://plausible.io/sites).
 1. Delivered to your web browser in a reasonably small size.
 1. No [cookies](https://en.wikipedia.org/wiki/HTTP_cookie). That means no pop-up asking you to accept cookie usage.
 1. Minimal CSS. No custom fonts causing a page re-layout and extra network usage. Dark and light mode support.
