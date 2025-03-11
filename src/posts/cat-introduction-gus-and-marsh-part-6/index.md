@@ -1,15 +1,16 @@
 ---
-date: "2025-03-10T22:30:00-08:00"
+date: "2025-03-11T07:30:00-08:00"
 title: "Introducing Cats to Each Other: Part 6"
 summary: Marsh starts fluoxetine and lots more behavioral training!
 banner_image:
-  alt: TODO
-draft: true
+  alt: Marsh looking at Gus pouncing on a toy
 tags:
   - cats
 ---
 
 It's been over ten weeks since we got Marsh! Sadly, he's still confined to his quarantine room. Things are getting better between him and Gus but Marsh can still be too antagonistic which eventually leads Gus to becoming nervous. We've taken big steps back in their introduction to ensure that Gus doesn't get stressed out, and to take bigger steps on Marsh's behavior training. We have a cat gate coming that we're going to use to give them a better intermediate step in the intro process. An exercise that [Mikel Delgado](https://mikeldelgado.com/) recommended to us is called "voluntary sharing" — Marsh will perfom his tricks, hear the clicker, and then Gus will get a treat before Marsh gets his reward. We're gonna do this through the cat gate.
+
+{% image "DSC06190-16x9.jpg" "Marsh looking at Gus pouncing on a toy" %}
 
 ## Impulse Control Aggression
 
@@ -47,6 +48,22 @@ He's been on fluoxetine (Prozac) for a week and a half now! There are risks to t
 
 ## Protocol for Deference
 
-One thing we've started with him is [Dr. Overall's Protocol for Deference](https://www.karenoverall.com/wp-content/uploads/2020/06/Protocol-for-deference_Overall.pdf). With this, we get Marsh used to sitting and looking calmly at us before he gets play, treats, meals, etc. He is already quite good at this!! He will sit after the verbal signal in most situations and look up at us. He's even started adopting some relaxed body language while doing this, like blinking slowly.
+One thing we've started with him is [Dr. Overall's Protocol for Deference](https://www.karenoverall.com/wp-content/uploads/2020/06/Protocol-for-deference_Overall.pdf). With this, we get Marsh used to sitting and looking calmly at us before he gets play, treats, meals, etc. He is already quite good at this!! He will sit after the verbal signal in most situations and look up at us. He's even started adopting some relaxed body language while doing this.
 
-## Relaxation Training
+## Behavioral Training
+
+Marsh is on an intensive but patient regiment of behavioral training. This includes:
+
+1. Positively reinforcing (using a clicker, praise, and treats) relaxed body language like blinking slowly, large breaths, and non-anxious grooming.
+1. [Biofeedback/breath training](https://www.karenoverall.com/wp-content/uploads/2020/06/Protocol-for-teaching-dogs-to-take-a-deep-breath_Overall.pdf)
+1. [Relaxation Training Tier 1](https://www.karenoverall.com/wp-content/uploads/2020/06/Protocol-for-relaxation_Overall.pdf) — he's really good at this! We're on Task Set 5.
+1. Pattern games.
+1. Switching back-and-forth between playing for a few minutes and relaxation training for a few minutes. He's pretty good at this!
+
+## Desensitization and Counterconditioning
+
+Marsh is pretty startled by sounds and I'm increasingly thinking that doing DS&CC for this is going to be a large part of all this.
+
+{% image "DSC06251.jpg" "Marsh climbing up a cactus cat scratcher" %}
+
+He just keeps going after Gus though 😭
