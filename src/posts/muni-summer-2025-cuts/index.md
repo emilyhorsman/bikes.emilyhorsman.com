@@ -11,6 +11,8 @@ tags:
 
 On [Tuesday](https://www.sfmta.com/calendar/board-directors-meeting-march-18-2025), the SFMTA Board of Directors voted to direct staff to pursue [service cuts this summer](https://www.sfmta.com/media/41902/download?inline). The vote went 3-2, with directors Chen, Hinze, and Tarlov supporting cuts. Cajina and Heminger did not. They correctly preferred the option to use the operating reserves. Henderson was absent on vacation. The seventh member, [Felder](https://www.sf.gov/mayor-lurie-appoints-alfonso-felder-to-sfmta-board), was not appointed in time to attend.
 
+There's still an opportunity to avoid the cuts.
+
 {% image './DSC07885.jpg' 'A very large crowd surrounding city hall' %}
 
 There was a rally on the city hall steps before the meeting. The [Muni Now Muni Forever](https://muniforever.org/) campaign organized it, and it was well-attended by hundreds of supporters and supervisors Mahmood (D5), Melgar (D7), and Fielder (D9). There's little to no media coverage of the vote to make cuts and even less of the rally beforehand. The media environment continues to focus on business needs, austerity politics, and fearmongering.
