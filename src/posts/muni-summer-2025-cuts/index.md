@@ -4,7 +4,6 @@ title: "They're cutting Muni service again."
 summary: The MTA Board of Directors voted to cut Muni service this summer. They should use the reserves instead.
 banner_image:
   alt: Chris Arvin at the city hall steps lectern with a large crowd of people
-draft: true
 tags:
   - muni
 ---
