@@ -4,7 +4,6 @@ title: "Introducing Cats to Each Other: Part 6"
 summary: Marsh starts fluoxetine and lots more behavioral training!
 banner_image:
   alt: Marsh looking at Gus pouncing on a toy
-draft: true
 tags:
   - cats
 ---
